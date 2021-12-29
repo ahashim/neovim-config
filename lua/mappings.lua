@@ -1,5 +1,11 @@
+----- MAPPINGS -----
+
 local map = function(key)
-  -- sensible default options
+  local mode = key[1] -- vim mode (normal, visual, etc..)
+  local lhs = key[2] -- left-hand-side (mapping)
+  local rhs = key[3] -- right-hand-side (macro)
+
+  -- sensible defaults
   local opts = {noremap = true}
 
   -- get any extra options
@@ -12,9 +18,9 @@ local map = function(key)
   opts.buffer = nil
 
   if buffer then 
-    vim.api.nvim_buf_set_keymap(0, key[1], key[2], key[3], opts)
+    vim.api.nvim_buf_set_keymap(0, mode, lhs, rhs, opts)
   else 
-    vim.api.nvim_set_keymap(key[1], key[2], key[3], opts)
+    vim.api.nvim_set_keymap(mode, lhs, rhs, opts)
   end
 end
 
