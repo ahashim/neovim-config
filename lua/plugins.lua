@@ -1,3 +1,5 @@
+----- PLUGINS -----
+
 return require('packer').startup(function()
   -- Packer 
   use 'wbthomason/packer.nvim'
@@ -16,4 +18,3 @@ return require('packer').startup(function()
     }
   }
 end)
-

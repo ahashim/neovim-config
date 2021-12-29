@@ -1,4 +1,5 @@
-local M = {}
+----- AUTOCOMMANDS -----
+
 local cmd = vim.cmd
 
 -- Hide status line on certain windows
