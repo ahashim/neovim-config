@@ -24,30 +24,32 @@ local map = function(key)
   end
 end
 
--- quick save
-map {'n', '<Leader>w', ':write<CR>'}
+-- GENERAL
+map {"n", "<C-a>", ":%y+ <CR>"} -- copy entire file content
+map {'n', '<Esc>', ':noh <CR>'} -- clear search highlight
+map {'n', '<Leader>w', ':write<CR>'} -- quick save
+map {'n', '<Leader>q', ':q<CR>'} -- quick close
+map {"n", "<Leader>n", ":set nu! <CR>"} -- toggle numbers
 
--- quick close
-map {'n', '<Leader>q', ':q<CR>'}
 
--- clear search highlighting with Esc
-map {'n', '<Esc>', ':noh <CR>'}
+-- BUFFERS/TABS
+map {"n", "<S-t>", ":enew <CR>"} -- new buffer
+map {"n", "<C-t>b", ":tabnew <CR>"} -- new tab
 
--- copy whole file content
-map {"n", "<C-a>", ":%y+ <CR>"} 
 
--- new buffer
-map {"n", "<S-t>", ":enew <CR>"}
-
--- new tab
-map {"n", "<C-t>b", ":tabnew <CR>"}
-
--- toggle numbers
-map {"n", "<leader>n", ":set nu! <CR>"}
-
--- Allow moving the cursor through wrapped lines with j, k, <Up> and <Down>
+-- NAVIGATION
+-- allow moving the cursor through wrapped lines with j, k, <Up> and <Down>
 -- http://www.reddit.com/r/vim/comments/2k4cbr/problem_with_gj_and_gk/
-map {"", "j", 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"',  expr = true }
-map {"", "k", 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"',  expr = true }
-map {"", "<Down>", 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"',  expr = true }
-map {"", "<Up>", 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"',  expr = true }
+map {'', "j", 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"',  expr = true }
+map {'', "k", 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"',  expr = true }
+map {'', "<Down>", 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"',  expr = true }
+map {'', "<Up>", 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"',  expr = true }
+
+
+-- TERMINAL
+map{"t", "jk", "<C-\\><C-n>"} -- get out of terminal mode
+-- map{"t", { "JK" }, "<C-\\><C-n> :lua require('core.utils').close_buffer() <CR>") -- hide a term from within terminal mode
+map{"n", "<leader>W", ":Telescope terms <CR>"} -- pick a hidden term
+map{"n", "<leader>h", ":execute 15 .. 'new +terminal' | let b:term_type = 'hori' | startinsert <CR>"} -- new horizontal terminal
+map{"n", "<leader>v", ":execute 'vnew +terminal' | let b:term_type = 'vert' | startinsert <CR>"} -- new vertical terminal
+map{"n", "<leader>w", ":execute 'terminal' | let b:term_type = 'wind' | startinsert <CR>"} -- new terminal window
