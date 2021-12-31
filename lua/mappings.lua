@@ -49,7 +49,6 @@ map {'', "<Up>", 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"',  expr = true }
 -- TERMINAL
 map{"t", "jk", "<C-\\><C-n>"} -- get out of terminal mode
 -- map{"t", { "JK" }, "<C-\\><C-n> :lua require('core.utils').close_buffer() <CR>") -- hide a term from within terminal mode
-map{"n", "<leader>W", ":Telescope terms <CR>"} -- pick a hidden term
+map{"n", "<leader>T", ":Telescope terms <CR>"} -- pick a hidden term
 map{"n", "<leader>h", ":execute 15 .. 'new +terminal' | let b:term_type = 'hori' | startinsert <CR>"} -- new horizontal terminal
 map{"n", "<leader>v", ":execute 'vnew +terminal' | let b:term_type = 'vert' | startinsert <CR>"} -- new vertical terminal
-map{"n", "<leader>w", ":execute 'terminal' | let b:term_type = 'wind' | startinsert <CR>"} -- new terminal window

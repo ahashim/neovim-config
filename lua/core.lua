@@ -5,7 +5,6 @@
 
 local global = vim.g 
 local set = vim.opt
-local cmd = vim.cmd
 
 ----- GLOBALS -----
 global.mapleader = " "
