@@ -21,8 +21,11 @@ return packer.startup(function()
 
   -- DevIcons 
   use 'kyazdani42/nvim-web-devicons'
+  config = function()
+    require('settings.devicons');
+  end
 
-  -- OneDark Theme
+  -- OneDark
   use {
     'navarasu/onedark.nvim',
     config = function()
