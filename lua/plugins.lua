@@ -16,6 +16,20 @@ packer.init {
 }
 
 return packer.startup(function()
+  -- Bufferline
+  use 'akinsho/bufferline.nvim'
+
+  -- DevIcons 
+  use 'kyazdani42/nvim-web-devicons'
+
+  -- OneDark Theme
+  use {
+    'navarasu/onedark.nvim',
+    config = function()
+      require('settings.onedark');
+    end
+  }
+  
   -- Packer 
   use 'wbthomason/packer.nvim'
   
