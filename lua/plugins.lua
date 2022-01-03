@@ -17,7 +17,16 @@ packer.init {
 
 return packer.startup(function()
   -- Bufferline
-  use 'akinsho/bufferline.nvim'
+  use {
+    'akinsho/bufferline.nvim',
+    after = "nvim-web-devicons",
+    config = function()
+      require('settings.bufferline')
+    end,
+    setup = function()
+       require(".mappings").bufferline()
+    end,
+  }
 
   -- DevIcons 
   use 'kyazdani42/nvim-web-devicons'

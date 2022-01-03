@@ -57,15 +57,21 @@ map {"n", "<leader>v", ":execute 'vnew +terminal' | let b:term_type = 'vert' | s
 ----- PLUGIN MAPPINGS -----
 
 return {
+  -- Bufferline
+  bufferline = function()
+    map {'n', '<TAB>', ':BufferLineCycleNext <CR>'}
+    map {'n', '<S-Tab>', ':BufferLineCyclePrev <CR>'}
+  end,
+
   -- Telescope
   telescope = function()
-    map{'n', '<leader>fb', ':Telescope buffers <CR>'} -- buffers
-    map{'n', '<leader>ff', ':Telescope find_files <CR>'} -- files 
-    map{'n', '<leader>fa', ':Telescope find_files no_ignore=true hidden=true <CR>'} -- hidden files
-    map{'n', '<leader>cm', ':Telescope git_commits <CR>'} -- git commits 
-    map{'n', '<leader>gt', ':Telescope git_status <CR>'} -- git statuses 
-    map{'n', '<leader>fh', ':Telescope help_tags <CR>'} -- help tags 
-    map{'n', '<leader>fw', ':Telescope live_grep <CR>'} -- live grep 
-    map{'n', '<leader>fo', ':Telescope oldfiles <CR>'} -- old files 
+    map {'n', '<leader>fb', ':Telescope buffers <CR>'} -- buffers
+    map {'n', '<leader>ff', ':Telescope find_files <CR>'} -- files 
+    map {'n', '<leader>fa', ':Telescope find_files no_ignore=true hidden=true <CR>'} -- hidden files
+    map {'n', '<leader>cm', ':Telescope git_commits <CR>'} -- git commits 
+    map {'n', '<leader>gt', ':Telescope git_status <CR>'} -- git statuses 
+    map {'n', '<leader>fh', ':Telescope help_tags <CR>'} -- help tags 
+    map {'n', '<leader>fw', ':Telescope live_grep <CR>'} -- live grep 
+    map {'n', '<leader>fo', ':Telescope oldfiles <CR>'} -- old files 
   end,
 }
