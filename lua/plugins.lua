@@ -26,7 +26,7 @@ return packer.startup(function()
   use {
     'nvim-treesitter/nvim-treesitter',
     config = function()
-      require 'plugins.treesitter'
+      require('settings.treesitter')
     end,
     event = 'BufRead',
     run = ':TSUpdate'
@@ -35,6 +35,10 @@ return packer.startup(function()
   -- Telescope
   use {
     'nvim-telescope/telescope.nvim',
+    cmd = "Telescope",
+    config = function()
+      require('settings.telescope')
+    end,
     requires = { 
       {
         'nvim-telescope/telescope-fzf-native.nvim',
@@ -46,6 +50,9 @@ return packer.startup(function()
           media_files = '<leader>fp'
         end,
       },
-    }
+    },
+    setup = function()
+      require('mappings').telescope()
+    end,
   }
 end)

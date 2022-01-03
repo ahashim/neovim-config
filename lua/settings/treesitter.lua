@@ -1,8 +1,7 @@
-local config = require('nvim-treesitter.configs')
-
-config.setup {
+require('nvim-treesitter.configs').setup {
   ensure_installed = {
     'bash',
+    'c',
     'cpp',
     'css',
     'dockerfile',
