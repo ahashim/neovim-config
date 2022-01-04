@@ -19,16 +19,16 @@ return packer.startup(function()
   -- Bufferline
   use {
     'akinsho/bufferline.nvim',
-    after = "nvim-web-devicons",
+    after = 'nvim-web-devicons',
     config = function()
       require('settings.bufferline')
     end,
     setup = function()
-       require("mappings").bufferline()
+       require('mappings').bufferline()
     end,
   }
 
-  -- DevIcons 
+  -- DevIcons
   use 'kyazdani42/nvim-web-devicons'
   config = function()
     require('settings.devicons');
@@ -41,6 +41,20 @@ return packer.startup(function()
       require('settings.lualine')
     end
   }
+  use {
+    'kyazdani42/nvim-tree.lua',
+    after = 'nvim-web-devicons',
+    cmd = {
+      'NvimTreeToggle',
+      'NvimTreeFocus'
+    },
+    config = function()
+      require('settings.nvimtree')
+    end,
+    setup = function()
+      require('mappings').nvimtree()
+    end,
+  }
 
   -- OneDark
   use {
@@ -49,11 +63,11 @@ return packer.startup(function()
       require('settings.onedark');
     end
   }
-  
-  -- Packer 
+
+  -- Packer
   use 'wbthomason/packer.nvim'
-  
-  -- Plenary 
+
+  -- Plenary
   use 'nvim-lua/plenary.nvim'
 
   -- Treesitter
@@ -69,15 +83,15 @@ return packer.startup(function()
   -- Telescope
   use {
     'nvim-telescope/telescope.nvim',
-    cmd = "Telescope",
+    cmd = 'Telescope',
     config = function()
       require('settings.telescope')
     end,
-    requires = { 
+    requires = {
       {
         'nvim-telescope/telescope-fzf-native.nvim',
         run = 'make',
-      }, 
+      },
       {
         'nvim-telescope/telescope-media-files.nvim',
         setup = function()
