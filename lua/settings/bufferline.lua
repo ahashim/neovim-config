@@ -53,7 +53,7 @@ bufferline.setup {
          guibg = theme.get('black2'),
       },
 
-      -- buffers
+      -- Buffers
       buffer_selected = {
          guifg = theme.get('white'),
          guibg = theme.get('black'),
@@ -64,7 +64,7 @@ bufferline.setup {
          guibg = theme.get('black2'),
       },
 
-      -- for diagnostics = "nvim_lsp"
+      -- Diagnostics (nvim_lsp)
       error = {
          guifg = theme.get('light_grey'),
          guibg = theme.get('black2'),
@@ -74,7 +74,7 @@ bufferline.setup {
          guibg = theme.get('black2'),
       },
 
-      -- close buttons
+      -- Close buttons
       close_button = {
          guifg = theme.get('light_grey'),
          guibg = theme.get('black2'),
@@ -96,7 +96,7 @@ bufferline.setup {
          guibg = theme.get('black'),
       },
 
-      -- modified
+      -- Modified
       modified = {
          guifg = theme.get('red'),
          guibg = theme.get('black2'),
@@ -110,7 +110,7 @@ bufferline.setup {
          guibg = theme.get('black'),
       },
 
-      -- separators
+      -- Separators
       separator = {
          guifg = theme.get('black2'),
          guibg = theme.get('black2'),
@@ -124,7 +124,7 @@ bufferline.setup {
          guibg = theme.get('black2'),
       },
 
-      -- tabs
+      -- Tabs
       tab = {
          guifg = theme.get('light_grey'),
          guibg = theme.get('one_bg3'),
