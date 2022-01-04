@@ -34,6 +34,16 @@ return packer.startup(function()
     require('settings.devicons');
   end
 
+
+  -- Indent Blankline
+  use {
+    "lukas-reineke/indent-blankline.nvim",
+    event = "BufRead",
+    config = function()
+      require('settings.indent-blankline')
+    end,
+  }
+
   -- Lualine
   use {
     'nvim-lualine/lualine.nvim',
@@ -41,6 +51,8 @@ return packer.startup(function()
       require('settings.lualine')
     end
   }
+
+  -- NvimTree
   use {
     'kyazdani42/nvim-tree.lua',
     after = 'nvim-web-devicons',
