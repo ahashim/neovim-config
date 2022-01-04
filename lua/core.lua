@@ -1,7 +1,7 @@
 --[[ 
   --- CORE NEOVIM CONFIG  ---
   View more information for each option with :help <option-name>
-]]
+--]]
 
 local global = vim.g 
 local set = vim.opt
@@ -23,7 +23,6 @@ set.whichwrap:append "<>[]hl"
 
 
 ----- COLORS ----- 
-set.background = 'dark'
 set.termguicolors = true
 
 

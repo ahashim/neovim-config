@@ -1,5 +1,4 @@
-
-local theme = require('settings.onedark')
+local theme = require('theme')
 
 local present, bufferline = pcall(require, 'bufferline')
 if not present then
@@ -12,7 +11,7 @@ bufferline.setup {
       buffer_close_icon = '',
       close_icon = '',
       custom_filter = function(buf_number)
-         -- Func to filter out our managed/persistent split terms
+         -- Filter out managed/persistent split terms
          local present_type, type = pcall(function()
             return vim.api.nvim_buf_get_var(buf_number, 'term_type')
          end)
