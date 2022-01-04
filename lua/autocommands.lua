@@ -2,10 +2,13 @@
 
 local cmd = vim.cmd
 
+-- Remove trailing whitespace from files on save
+cmd [[ autocmd BufWritePre * :%s/\s\+$//e ]]
+
 -- Hide status line on certain windows
 cmd [[ autocmd BufEnter,BufRead,BufWinEnter,FileType,WinEnter * lua require("autocommands").hide_statusline() ]]
 
--- Hide line numbers in terminal windows  
+-- Hide line numbers in terminal windows
 cmd [[ au TermOpen term://* setlocal nonumber norelativenumber | setfiletype terminal ]]
 
 -- Open a file from its last left off position

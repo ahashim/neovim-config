@@ -24,7 +24,7 @@ return packer.startup(function()
       require('settings.bufferline')
     end,
     setup = function()
-       require(".mappings").bufferline()
+       require("mappings").bufferline()
     end,
   }
 
@@ -33,6 +33,14 @@ return packer.startup(function()
   config = function()
     require('settings.devicons');
   end
+
+  -- Lualine
+  use {
+    'nvim-lualine/lualine.nvim',
+    config = function()
+      require('settings.lualine')
+    end
+  }
 
   -- OneDark
   use {

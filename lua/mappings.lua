@@ -28,7 +28,7 @@ end
 map {'n', '<C-a>', ':%y+ <CR>'} -- copy entire file content
 map {'n', '<Esc>', ':noh <CR>'} -- clear search highlight
 map {'n', '<Leader>w', ':write<CR>'} -- quick save
-map {'n', '<Leader>q', ':q<CR>'} -- quick close
+map {'n', '<Leader>q', ':quit!<CR>'} -- quick close
 map {'n', '<Leader>n', ':set nu! <CR>'} -- toggle numbers
 
 
