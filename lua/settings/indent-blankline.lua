@@ -1,5 +1,7 @@
 require('indent_blankline').setup {
-  buftype_exclude = { 'terminal' },
+  buftype_exclude = {
+    'terminal'
+  },
   char = '▏',
   filetype_exclude = {
      'help',

@@ -28,17 +28,27 @@ return packer.startup(function()
     end,
   }
 
+  -- Dashboard
+   use {
+      'glepnir/dashboard-nvim',
+      config = function()
+        require('settings.dashboard')
+      end,
+      setup = function()
+        require('mappings').dashboard()
+      end,
+   }
+
   -- DevIcons
   use 'kyazdani42/nvim-web-devicons'
   config = function()
     require('settings.devicons');
   end
 
-
   -- Indent Blankline
   use {
-    "lukas-reineke/indent-blankline.nvim",
-    event = "BufRead",
+    'lukas-reineke/indent-blankline.nvim',
+    event = 'BufRead',
     config = function()
       require('settings.indent-blankline')
     end,

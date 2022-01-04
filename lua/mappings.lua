@@ -63,6 +63,12 @@ return {
     map {'n', '<S-Tab>', ':BufferLineCyclePrev <CR>'}
   end,
 
+  --Dashboard
+  dashboard = function()
+    map {'n', '<leader>db', ':Dashboard <CR>'}
+    map {'n', '<leader>fn', ':DashboardNewFile <CR>'}
+  end,
+
   -- NvimTree
   nvimtree = function()
     map {'n', '<C-n>', ':NvimTreeToggle <CR>'}
