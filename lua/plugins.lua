@@ -28,6 +28,15 @@ return packer.startup(function()
     end,
   }
 
+  -- Colorizer
+  use {
+    'norcalli/nvim-colorizer.lua',
+    event = 'BufRead',
+    config = function()
+      require('settings.colorizer')
+    end,
+  }
+
   -- Dashboard
    use {
       'glepnir/dashboard-nvim',
