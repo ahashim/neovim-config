@@ -32,12 +32,12 @@ bufferline.setup {
       max_name_length = 14,
       max_prefix_length = 13,
       modified_icon = '',
-      offsets = { 
-        { 
-          filetype = 'NvimTree', 
-          text = '', 
-          padding = 1 
-        } 
+      offsets = {
+        {
+          filetype = 'NvimTree',
+          text = '',
+          padding = 1
+        }
       },
       right_trunc_marker = '',
       separator_style = 'thin',
@@ -57,7 +57,7 @@ bufferline.setup {
       buffer_selected = {
          guifg = theme.get('white'),
          guibg = theme.get('black'),
-         gui = "bold",
+         gui = 'bold',
       },
       buffer_visible = {
          guifg = theme.get('light_grey'),

@@ -6,7 +6,7 @@ local cmd = vim.cmd
 cmd [[ autocmd BufWritePre * :%s/\s\+$//e ]]
 
 -- Hide status line on certain windows
-cmd [[ autocmd BufEnter,BufRead,BufWinEnter,FileType,WinEnter * lua require("autocommands").hide_statusline() ]]
+cmd [[ autocmd BufEnter,BufRead,BufWinEnter,FileType,WinEnter * lua require('autocommands').hide_statusline() ]]
 
 -- Hide line numbers in terminal windows
 cmd [[ au TermOpen term://* setlocal nonumber norelativenumber | setfiletype terminal ]]
@@ -28,19 +28,19 @@ cmd([[
 return {
   hide_statusline = function()
     local api = vim.api
-    local buftype = api.nvim_buf_get_option("%", "ft")
+    local buftype = api.nvim_buf_get_option('%', 'ft')
     local hidden = {
-      "help",
-      "dashboard",
-      "NvimTree",
-      "terminal",
+      'help',
+      'dashboard',
+      'NvimTree',
+      'terminal',
     }
 
     if vim.tbl_contains(hidden, buftype) then
-      api.nvim_set_option("laststatus", 0)
+      api.nvim_set_option('laststatus', 0)
       return
     end
 
-    api.nvim_set_option("laststatus", 2)
+    api.nvim_set_option('laststatus', 2)
   end
 }

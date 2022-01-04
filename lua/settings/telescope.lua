@@ -3,19 +3,19 @@ local telescope = require('telescope')
 telescope.setup {
    defaults = {
       border = {},
-      borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+      borderchars = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
       color_devicons = true,
-      entry_prefix = "  ",
-      file_sorter = require("telescope.sorters").get_fuzzy_file,
-      file_ignore_patterns = { "node_modules" },
-      file_previewer = require("telescope.previewers").vim_buffer_cat.new,
-      generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
-      grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
-      initial_mode = "insert",
-      layout_strategy = "horizontal",
+      entry_prefix = '  ',
+      file_sorter = require('telescope.sorters').get_fuzzy_file,
+      file_ignore_patterns = { 'node_modules' },
+      file_previewer = require('telescope.previewers').vim_buffer_cat.new,
+      generic_sorter = require('telescope.sorters').get_generic_fuzzy_sorter,
+      grep_previewer = require('telescope.previewers').vim_buffer_vimgrep.new,
+      initial_mode = 'insert',
+      layout_strategy = 'horizontal',
       layout_config = {
          horizontal = {
-            prompt_position = "top",
+            prompt_position = 'top',
             preview_width = 0.55,
             results_width = 0.8,
          },
@@ -26,31 +26,31 @@ telescope.setup {
          height = 0.80,
          preview_cutoff = 120,
       },
-      path_display = { "truncate" },
-      prompt_prefix = "   ",
-      qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
-      selection_caret = "  ",
-      selection_strategy = "reset",
-      sorting_strategy = "ascending",
-      set_env = { ["COLORTERM"] = "truecolor" }, -- default = nil,
+      path_display = { 'truncate' },
+      prompt_prefix = '   ',
+      qflist_previewer = require('telescope.previewers').vim_buffer_qflist.new,
+      selection_caret = '  ',
+      selection_strategy = 'reset',
+      sorting_strategy = 'ascending',
+      set_env = { ['COLORTERM'] = 'truecolor' }, -- default = nil,
       use_less = true,
       vimgrep_arguments = {
-         "rg",
-         "--color=never",
-         "--no-heading",
-         "--with-filename",
-         "--line-number",
-         "--column",
-         "--smart-case",
+         'rg',
+         '--color=never',
+         '--no-heading',
+         '--with-filename',
+         '--line-number',
+         '--column',
+         '--smart-case',
       },
       winblend = 0,
-      
+
       -- Developer configurations: Not meant for general override
-      buffer_previewer_maker = require("telescope.previewers").buffer_previewer_maker,
+      buffer_previewer_maker = require('telescope.previewers').buffer_previewer_maker,
    },
 }
 
-local extensions = { "themes", "terms" }
+local extensions = { 'themes', 'terms' }
 
 pcall(function()
    for _, ext in ipairs(extensions) do
