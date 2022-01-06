@@ -28,6 +28,17 @@ return packer.startup(function()
     end,
   }
 
+  -- BufDelete
+  use {
+    'ojroques/nvim-bufdel',
+    config = function()
+      require('settings.bufdelete')
+    end,
+    setup = function()
+      require('mappings').bufdelete()
+    end
+  }
+
   -- Colorizer
   use {
     'norcalli/nvim-colorizer.lua',

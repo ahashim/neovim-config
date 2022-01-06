@@ -48,7 +48,6 @@ map {'', '<Up>', 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"',  expr = true }
 
 -- Terminal
 map {'t', 'jk', '<C-\\><C-n>'} -- get out of terminal mode
---  map{'t', { 'JK' }, '<C-\\><C-n> :lua require('core.utils').close_buffer() <CR>') -- hide a term from within terminal mode
 map {'n', '<leader>T', ':Telescope terms <CR>'} -- pick a hidden term
 map {'n', '<leader>h', ":execute 15 .. 'new +terminal' | let b:term_type = 'hori' | startinsert <CR>"} -- new horizontal terminal
 map {'n', '<leader>v', ":execute 'vnew +terminal' | let b:term_type = 'vert' | startinsert <CR>"} -- new vertical terminal
@@ -61,6 +60,11 @@ return {
   bufferline = function()
     map {'n', '<TAB>', ':BufferLineCycleNext <CR>'}
     map {'n', '<S-Tab>', ':BufferLineCyclePrev <CR>'}
+  end,
+
+  -- BufDelete
+  bufdelete = function()
+    map { 'n', '<S-x>', ':BufDel <CR>'}
   end,
 
   --Dashboard
