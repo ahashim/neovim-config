@@ -7,7 +7,7 @@ end
 
 bufferline.setup {
    options = {
-      always_show_bufferline = false,
+      always_show_bufferline = true,
       buffer_close_icon = '',
       close_icon = '',
       custom_filter = function(buf_number)

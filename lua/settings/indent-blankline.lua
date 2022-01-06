@@ -7,6 +7,7 @@ require('indent_blankline').setup {
     'help',
     'terminal',
     'dashboard',
+    'Dashboard',
     'packer',
     'lspinfo',
     'TelescopePrompt',

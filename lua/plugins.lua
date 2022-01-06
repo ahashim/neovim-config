@@ -40,7 +40,6 @@ return packer.startup(function()
   -- Dashboard
    use {
       'glepnir/dashboard-nvim',
-      -- after = 'indent-blankline.nvim',
       config = function()
         require('settings.dashboard')
       end,
@@ -60,7 +59,7 @@ return packer.startup(function()
   -- Indent Blankline
   use {
     'lukas-reineke/indent-blankline.nvim',
-    event = 'BufRead',
+    after = 'dashboard-nvim',
     config = function()
       require('settings.indent-blankline')
     end,
