@@ -67,6 +67,9 @@ return packer.startup(function()
     end,
   }
 
+  -- Fugitive
+  use 'tpope/vim-fugitive'
+
   -- Gitsigns
   use {
     'lewis6991/gitsigns.nvim',
