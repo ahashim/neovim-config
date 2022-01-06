@@ -40,6 +40,7 @@ return packer.startup(function()
   -- Dashboard
    use {
       'glepnir/dashboard-nvim',
+      -- after = 'indent-blankline.nvim',
       config = function()
         require('settings.dashboard')
       end,
@@ -49,10 +50,12 @@ return packer.startup(function()
    }
 
   -- DevIcons
-  use 'kyazdani42/nvim-web-devicons'
-  config = function()
-    require('settings.devicons');
-  end
+  use {
+    'kyazdani42/nvim-web-devicons',
+    config = function()
+      require('settings.devicons');
+    end,
+  }
 
   -- Indent Blankline
   use {
@@ -61,14 +64,6 @@ return packer.startup(function()
     config = function()
       require('settings.indent-blankline')
     end,
-  }
-
-  -- Lualine
-  use {
-    'nvim-lualine/lualine.nvim',
-    config = function()
-      require('settings.lualine')
-    end
   }
 
   -- NvimTree
@@ -92,7 +87,7 @@ return packer.startup(function()
     'navarasu/onedark.nvim',
     config = function()
       require('settings.onedark');
-    end
+    end,
   }
 
   -- Packer
@@ -100,6 +95,14 @@ return packer.startup(function()
 
   -- Plenary
   use 'nvim-lua/plenary.nvim'
+
+  -- Statusline
+  use {
+    'nvim-lualine/lualine.nvim',
+    config = function()
+      require('settings.statusline')
+    end,
+  }
 
   -- Treesitter
   use {

@@ -39,7 +39,6 @@ global.dashboard_custom_section = {
    b = { description = { '  Recents                   SPC f o' }, command = 'Telescope oldfiles' },
    c = { description = { '  Find Word                 SPC f w' }, command = 'Telescope live_grep' },
    d = { description = { '洛 New File                  SPC f n' }, command = 'DashboardNewFile' },
-   f = { description = { '  Load Last Session         SPC l  ' }, command = 'SessionLoad' },
 }
 global.dashboard_custom_footer = {
    '"Talk is Cheap. Show me the code."',
