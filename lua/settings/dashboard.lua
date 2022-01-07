@@ -41,6 +41,6 @@ global.dashboard_custom_section = {
    d = { description = { '洛 New File                  SPC f n' }, command = 'DashboardNewFile' },
 }
 global.dashboard_custom_footer = {
-   '"Talk is Cheap. Show me the code."',
-   '         ― Linus Torvalds         ',
+   '"Talk is cheap. Show me the code."',
+   '          Linus Torvalds          ',
 }
