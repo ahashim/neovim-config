@@ -87,6 +87,27 @@ return packer.startup(function()
     end,
   }
 
+  -- Language Server
+  use {
+    'neovim/nvim-lspconfig',
+    config = function()
+      require('settings.lspconfig')
+    end,
+    setup = function()
+      local wait = 0 -- milliseconds
+
+      -- lazy load the plugin
+      vim.defer_fn(function()
+        require('packer').loader('nvim-lspconfig')
+      end, wait)
+
+      -- reload the current file with lsp enabled
+      vim.defer_fn(function()
+        vim.cmd 'if &ft == "packer" | echo "" | else | silent! e %'
+      end, wait)
+    end,
+  }
+
   -- NvimTree
   use {
     'kyazdani42/nvim-tree.lua',
