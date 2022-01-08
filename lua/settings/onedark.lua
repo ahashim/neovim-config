@@ -1,2 +1,7 @@
-vim.g.onedark_style = 'darker'
-require('onedark').setup()
+local onedark = require('onedark')
+
+onedark.setup {
+  style = 'darker'
+}
+
+onedark.load()
