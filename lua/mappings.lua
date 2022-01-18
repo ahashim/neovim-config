@@ -71,6 +71,12 @@ return {
     map {'n', '<S-x>', ':BufDel <CR>'}
   end,
 
+  -- Comment
+  comment = function()
+    map {'n', '<leader>/', ":lua require('Comment.api').toggle_current_linewise()<CR>"}
+    map {'v', '<leader>/', ":lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<CR>"}
+  end,
+
   -- Dashboard
   dashboard = function()
     map {'n', '<leader>db', ':Dashboard <CR>'}

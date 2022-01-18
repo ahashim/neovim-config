@@ -49,6 +49,17 @@ return packer.startup(function()
     end,
   }
 
+  -- Comments
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('settings.comment')
+    end,
+    setup = function()
+      require('mappings').comment()
+    end
+  }
+
   -- Dashboard
    use {
       'glepnir/dashboard-nvim',
