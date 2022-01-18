@@ -1,3 +1,5 @@
+require('impatient') -- improve startup time
+
 local modules = {
   'core',
   'autocommands',

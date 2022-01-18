@@ -103,6 +103,9 @@ return packer.startup(function()
     end
   }
 
+  -- Impatient
+  use 'lewis6991/impatient.nvim'
+
   -- Indent Blankline
   use {
     'lukas-reineke/indent-blankline.nvim',
