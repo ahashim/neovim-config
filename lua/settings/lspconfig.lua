@@ -1,24 +1,19 @@
 -- Capabilities
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.commitCharactersSupport = true
-capabilities.textDocument.completion.completionItem.deprecatedSupport = true
-capabilities.textDocument.completion.completionItem.documentationFormat = {
-  'markdown',
-  'plaintext'
-}
+capabilities.textDocument.completion.completionItem.documentationFormat = { 'markdown', 'plaintext' }
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities.textDocument.completion.completionItem.preselectSupport = true
 capabilities.textDocument.completion.completionItem.insertReplaceSupport = true
 capabilities.textDocument.completion.completionItem.labelDetailsSupport = true
-capabilities.textDocument.completion.completionItem.preselectSupport = true
+capabilities.textDocument.completion.completionItem.deprecatedSupport = true
+capabilities.textDocument.completion.completionItem.commitCharactersSupport = true
+capabilities.textDocument.completion.completionItem.tagSupport = { valueSet = { 1 } }
 capabilities.textDocument.completion.completionItem.resolveSupport = {
-  properties = {
-    'documentation',
-    'detail',
-    'additionalTextEdits',
-  },
-}
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-capabilities.textDocument.completion.completionItem.tagSupport = {
-  valueSet = { 1 }
+   properties = {
+      'documentation',
+      'detail',
+      'additionalTextEdits',
+   },
 }
 
 
@@ -43,6 +38,26 @@ vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
   vim.lsp.handlers.signature_help,
   { border = 'single'}
 )
+
+
+-- LSP Signature
+local lsp_signature_config = {
+  bind = true,
+  doc_lines = 0,
+  floating_window = true,
+  fix_pos = true,
+  handler_opts = {
+    border = 'single',
+  },
+  hint_enable = true,
+  hint_prefix = ' ',
+  hint_scheme = 'String',
+  hi_parameter = 'Search',
+  max_height = 22,
+  max_width = 120,
+  padding = '',
+  zindex = 200,
+}
 
 
 -- Notifications
@@ -86,8 +101,8 @@ require('nvim-lsp-installer').on_server_ready(function(server)
   local opts = {
     capabilities = capabilities,
     on_attach = function()
-      -- Enable completion triggered by <c-x><c-o>
-      vim.bo.omnifunc = 'v:lua.vim.lsp.omnifunc'
+      -- LSP Signature
+      require('lsp_signature').on_attach(lsp_signature_config)
 
       -- Mappings
       require('mappings').lspconfig()

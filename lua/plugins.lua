@@ -60,6 +60,19 @@ return packer.startup(function()
     end
   }
 
+  -- Completion
+  use {
+    'hrsh7th/nvim-cmp',
+    config = function()
+      require('settings.nvim-cmp')
+    end
+  }
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'hrsh7th/cmp-nvim-lua'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+
   -- Dashboard
    use {
       'glepnir/dashboard-nvim',
@@ -101,10 +114,23 @@ return packer.startup(function()
 
   -- Language Server
   use 'neovim/nvim-lspconfig'
+  use 'ray-x/lsp_signature.nvim'
   use {
     'williamboman/nvim-lsp-installer',
     config = function()
       require('settings.lspconfig')
+    end
+  }
+
+  -- Snippets
+  use {
+    'rafamadriz/friendly-snippets',
+    event = 'InsertEnter',
+  }
+  use {
+    'L3MON4D3/LuaSnip',
+    config = function()
+      require('settings.luasnip')
     end
   }
 
