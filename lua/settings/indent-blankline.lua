@@ -1,6 +1,6 @@
 require('indent_blankline').setup {
   buftype_exclude = {
-    'terminal'
+    'terminal',
   },
   char = '▏',
   filetype_exclude = {
@@ -10,6 +10,7 @@ require('indent_blankline').setup {
     'Dashboard',
     'packer',
     'lspinfo',
+    'lsp-installer',
     'TelescopePrompt',
     'TelescopeResults',
     '',

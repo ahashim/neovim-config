@@ -1,35 +1,35 @@
---[[ 
+--[[
   --- CORE NEOVIM CONFIG  ---
   View more information for each option with :help <option-name>
 --]]
 
-local global = vim.g 
+local global = vim.g
 local set = vim.opt
 
 ----- GLOBALS -----
-global.mapleader = ' ' 
+global.mapleader = ' '
 
 
------ GENERAL ----- 
+----- GENERAL -----
 set.clipboard = 'unnamedplus'
 set.cmdheight = 1
 set.cursorline = true
-set.hidden = true 
+set.hidden = true
 set.fillchars = { eob = ' ' }
 set.mouse = 'a'
 set.shortmess:append 'sI'
 set.undofile = true
-set.whichwrap:append '<>[]hl' 
+set.whichwrap:append '<>[]hl'
 
 
------ COLORS ----- 
+----- COLORS -----
 set.termguicolors = true
 
 
------ LAYOUT ----- 
+----- LAYOUT -----
 set.signcolumn = 'yes'
-set.splitbelow = true 
-set.splitright= true 
+set.splitbelow = true
+set.splitright= true
 set.title = true
 
 
@@ -37,7 +37,7 @@ set.title = true
 set.ignorecase = true
 set.number = true
 set.numberwidth = 2
-set.relativenumber = false 
+set.relativenumber = false
 set.ruler = false
 
 

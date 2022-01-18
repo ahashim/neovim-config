@@ -79,44 +79,24 @@ return {
 
   -- Language Server
   lspconfig = function()
-    local commands = {
-      declaration =             'gD',
-      definition =              'gd',
-      hover =                   'K',
-      implementation =          'gi',
-      signature_help =          'gk',
-      add_workspace_folder =    '<leader>wa',
-      remove_workspace_folder = '<leader>wr',
-      list_workspace_folders =  '<leader>wl',
-      type_definition =         '<leader>D',
-      rename =                  '<leader>rn',
-      code_action =             '<leader>ca',
-      references =              'gr',
-      float_diagnostics =       'ge',
-      goto_prev =               '[d',
-      goto_next =               ']d',
-      set_loclist =             '<leader>l',
-      formatting =              '<leader>fm',
-   },
-
     -- See `:help vim.lsp.*` for documentation on any of the below functions
-    map {'n', commands.declaration, '<cmd>lua vim.lsp.buf.declaration()<CR>'}
-    map {'n', commands.definition, '<cmd>lua vim.lsp.buf.definition()<CR>'}
-    map {'n', commands.hover, '<cmd>lua vim.lsp.buf.hover()<CR>'}
-    map {'n', commands.implementation, '<cmd>lua vim.lsp.buf.implementation()<CR>'}
-    map {'n', commands.signature_help, '<cmd>lua vim.lsp.buf.signature_help()<CR>'}
-    map {'n', commands.add_workspace_folder, '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>'}
-    map {'n', commands.remove_workspace_folder, '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>'}
-    map {'n', commands.list_workspace_folders, '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>'}
-    map {'n', commands.type_definition, '<cmd>lua vim.lsp.buf.type_definition()<CR>'}
-    map {'n', commands.rename, '<cmd>lua vim.lsp.buf.rename()<CR>'}
-    map {'n', commands.code_action, '<cmd>lua vim.lsp.buf.code_action()<CR>'}
-    map {'n', commands.references, '<cmd>lua vim.lsp.buf.references()<CR>'}
-    map {'n', commands.float_diagnostics, '<cmd>lua vim.diagnostic.open_float()<CR>'}
-    map {'n', commands.goto_prev, '<cmd>lua vim.diagnostic.goto_prev()<CR>'}
-    map {'n', commands.goto_next, '<cmd>lua vim.diagnostic.goto_next()<CR>'}
-    map {'n', commands.set_loclist, '<cmd>lua vim.diagnostic.setloclist()<CR>'}
-    map {'n', commands.formatting, '<cmd>lua vim.lsp.buf.formatting()<CR>'}
+    map {'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>'}
+    map {'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>'}
+    map {'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>'}
+    map {'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>'}
+    map {'n', 'gk', '<cmd>lua vim.lsp.buf.signature_help()<CR>'}
+    map {'n', '<leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>'}
+    map {'n', '<leader>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>'}
+    map {'n', '<leader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>'}
+    map {'n', '<leader>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>'}
+    map {'n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>'}
+    map {'n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>'}
+    map {'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>'}
+    map {'n', 'ge', '<cmd>lua vim.diagnostic.open_float()<CR>'}
+    map {'n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>'}
+    map {'n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>'}
+    map {'n', '<leader>l', '<cmd>lua vim.diagnostic.setloclist()<CR>'}
+    map {'n', '<leader>fm', '<cmd>lua vim.lsp.buf.formatting()<CR>'}
   end,
 
   -- NvimTree

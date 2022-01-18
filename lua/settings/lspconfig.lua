@@ -60,20 +60,6 @@ vim.notify = function(msg, log_level)
 end
 
 
--- On Attach
-local function on_attach(_, bufnr)
-  local function buf_set_option(...)
-    vim.api.nvim_buf_set_option(bufnr, ...)
-  end
-
-  -- Enable completion triggered by <c-x><c-o>
-  buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
-
-  -- Mappings
-  require('mappings').lspconfig()
-end
-
-
 -- Symbols
 local function lspSymbol(name, icon)
   local hl = 'DiagnosticSign' .. name
@@ -89,3 +75,51 @@ lspSymbol('Error', '')
 lspSymbol('Hint', '')
 lspSymbol('Info', '')
 lspSymbol('Warn', '')
+
+
+-- Initialize Servers
+require('nvim-lsp-installer').on_server_ready(function(server)
+  -- This setup() function is exactly the same as lspconfig's setup function.
+  -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+
+  -- Sensible defaults
+  local opts = {
+    capabilities = capabilities,
+    on_attach = function()
+      -- Enable completion triggered by <c-x><c-o>
+      vim.bo.omnifunc = 'v:lua.vim.lsp.omnifunc'
+
+      -- Mappings
+      require('mappings').lspconfig()
+    end,
+    root_dir = vim.loop.cwd,
+  }
+
+  -- Lua
+  if server.name == 'sumneko_lua' then
+    opts.settings = {
+      Lua = {
+        runtime = {
+          -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+          version = 'LuaJIT',
+          -- Setup your lua path
+          path = vim.split(package.path, ';'),
+        },
+        diagnostics = {
+          -- Get the language server to recognize the `vim` global
+          globals = { 'vim' },
+        },
+        workspace = {
+          -- Make the server aware of Neovim runtime files
+          library = vim.api.nvim_get_runtime_file('', true),
+        },
+        -- Do not send telemetry data containing a randomized but unique identifier
+        telemetry = {
+          enable = false,
+        },
+      }
+    }
+  end
+
+  server:setup(opts)
+end)

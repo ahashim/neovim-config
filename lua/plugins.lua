@@ -1,5 +1,6 @@
 ----- PLUGINS -----
 local packer = require('packer')
+local use = packer.use
 
 packer.init {
   auto_clean = true,
@@ -88,24 +89,12 @@ return packer.startup(function()
   }
 
   -- Language Server
+  use 'neovim/nvim-lspconfig'
   use {
-    'neovim/nvim-lspconfig',
+    'williamboman/nvim-lsp-installer',
     config = function()
       require('settings.lspconfig')
-    end,
-    setup = function()
-      local wait = 0 -- milliseconds
-
-      -- lazy load the plugin
-      vim.defer_fn(function()
-        require('packer').loader('nvim-lspconfig')
-      end, wait)
-
-      -- reload the current file with lsp enabled
-      vim.defer_fn(function()
-        vim.cmd 'if &ft == "packer" | echo "" | else | silent! e %'
-      end, wait)
-    end,
+    end
   }
 
   -- NvimTree
