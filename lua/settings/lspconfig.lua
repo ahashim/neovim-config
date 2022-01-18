@@ -100,6 +100,9 @@ require('nvim-lsp-installer').on_server_ready(function(server)
   -- Sensible defaults
   local opts = {
     capabilities = capabilities,
+    flags = {
+      debounce_text_changes = 150
+    },
     on_attach = function()
       -- LSP Signature
       require('lsp_signature').on_attach(lsp_signature_config)

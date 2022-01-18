@@ -67,11 +67,11 @@ return packer.startup(function()
       require('settings.nvim-cmp')
     end
   }
-  use 'saadparwaiz1/cmp_luasnip'
   use 'hrsh7th/cmp-nvim-lua'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
+  use 'saadparwaiz1/cmp_luasnip'
 
   -- Dashboard
    use {
