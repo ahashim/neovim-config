@@ -167,6 +167,9 @@ return packer.startup(function()
   -- Plenary
   use 'nvim-lua/plenary.nvim'
 
+  -- Solidity
+  use 'tomlion/vim-solidity'
+
   -- Statusline
   use {
     'nvim-lualine/lualine.nvim',
