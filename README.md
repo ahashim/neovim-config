@@ -1,12 +1,8 @@
 # neovim-config
-A modern config for [neovim](https://neovim.io/) focused on developer experience, featuring:
 
-- Language server support
-- Syntax highlighting
-- Terminal windows
-- Git integration
+[![neovim preview](https://gateway.pinata.cloud/ipfs/QmamHwPGgpDQGRwvR7SVZXmScBxUv43nd6N4QjtUNPgwLK?preview=1 "neovim preview")](https://gateway.pinata.cloud/ipfs/QmamHwPGgpDQGRwvR7SVZXmScBxUv43nd6N4QjtUNPgwLK?preview=1)
 
-and [a few other things.](https://github.com/ahashim/neovim-config/blob/main/lua/plugins.lua)
+A modern config for [neovim](https://neovim.io/) focused on developer experience. Featuring language server support, syntax highlighting, terminal windows, git integration, and [a few other things.](https://github.com/ahashim/neovim-config/blob/main/lua/plugins.lua)
 
 ## Requirements
 
