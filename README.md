@@ -40,3 +40,34 @@ nvim
         ├── telescope.lua
         └── treesitter.lua
 ```
+
+## Mappings
+
+Commonly used mappings in this config. [View the full list here](https://github.com/ahashim/neovim-config/blob/main/lua/mappings.lua).
+
+| Shortcut                  | Mode                  | Description                                                                 |
+| ------------------------- | --------------------- | --------------------------------------------------------------------------- |
+| <kbd>Space db</kbd>       | Normal                | Dashboard                                                                   |
+| <kbd>Space fn</kbd>       | Normal                | New File                                                                    |
+| <kbd>Space w</kbd>        | Normal                | Save                                                                        |
+| <kbd>Space q</kbd>        | Normal                | Quit                                                                        |
+| <kbd>Shift + t</kbd>      | Normal                | New Buffer                                                                  |
+| <kbd>Tab</kbd>            | Normal                | Next Buffer                                                                 |
+| <kbd>Shift + Tab</kbd>    | Normal                | Previous Buffer                                                             |
+| <kbd>Ctrl + t</kbd>       | Normal                | New Tab                                                                     |
+| <kbd>Ctrl + n</kbd>       | Normal                | Toggle directory tree view                                                  |
+| <kbd>Space e</kbd>        | Normal                | View current file in directory tree view                                    |
+| <kbd>Ctrl + a</kbd>       | Normal                | Copy entire file content                                                    |
+| <kbd>Esc</kbd>            | Normal                | Clear search highlight                                                      |
+| <kbd>Space /</kbd>        | Normal                | Toggle comment                                                              |
+| <kbd>Space h</kbd>        | Normal                | New Horizontal Terminal                                                     |
+| <kbd>Space v</kbd>        | Normal                | New Vertical Terminal                                                       |
+| <kbd>jk</kbd>             | Terminal              | Exit Terminal Mode                                                          |
+| <kbd>gd</kbd>             | Normal                | Goes to definition of the symbol under the cursor                           |
+| <kbd>Space l</kbd>        | Normal                | View buffer errors/warnings/info location list                              |
+| <kbd>Space fb</kbd>       | Normal                | Telescope find in all buffers                                               |
+| <kbd>Space fa</kbd>       | Normal                | Telescope find in all files                                                 |
+| <kbd>Space ff</kbd>       | Normal                | Telescope find in all files (exluding hidden files & those in .gitignore)   |
+| <kbd>Space cm</kbd>       | Normal                | Telescope view git commits                                                  |
+| <kbd>Space gt</kbd>       | Normal                | Telescope view git status                                                   |
+| <kbd>Space hb</kbd>       | Normal                | Git blame current line                                                      |
