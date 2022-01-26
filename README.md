@@ -43,7 +43,7 @@ nvim
 
 ## Mappings
 
-Commonly used mappings in this config. [View the full list here](https://github.com/ahashim/neovim-config/blob/main/lua/mappings.lua).
+Commonly used mappings in this config. [View the full list here](https://github.com/ahashim/neovim-config/blob/main/lua/mappings.lua#L27).
 
 | Shortcut                  | Mode                  | Description                                                                 |
 | ------------------------- | --------------------- | --------------------------------------------------------------------------- |
