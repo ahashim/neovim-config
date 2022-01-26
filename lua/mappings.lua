@@ -29,12 +29,11 @@ map {'n', '<C-a>', ':%y+ <CR>'} -- copy entire file content
 map {'n', '<Esc>', ':noh <CR>'} -- clear search highlight
 map {'n', '<Leader>w', ':write<CR>'} -- quick save
 map {'n', '<Leader>q', ':quit!<CR>'} -- quick close
-map {'n', '<Leader>n', ':set nu! <CR>'} -- toggle numbers
 
 
 -- Buffers/Tabs
 map {'n', '<S-t>', ':enew <CR>'} -- new buffer
-map {'n', '<C-t>b', ':tabnew <CR>'} -- new tab
+map {'n', '<C-t>', ':tabnew <CR>'} -- new tab
 
 
 -- Navigation
