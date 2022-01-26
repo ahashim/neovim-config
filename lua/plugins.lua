@@ -125,17 +125,8 @@ return packer.startup(function()
     end
   }
 
-  -- Snippets
-  use {
-    'rafamadriz/friendly-snippets',
-    event = 'InsertEnter',
-  }
-  use {
-    'L3MON4D3/LuaSnip',
-    config = function()
-      require('settings.luasnip')
-    end
-  }
+  -- Markdown
+  use 'iamcco/markdown-preview.nvim'
 
   -- NvimTree
   use {
@@ -166,6 +157,18 @@ return packer.startup(function()
 
   -- Plenary
   use 'nvim-lua/plenary.nvim'
+
+  -- Snippets
+  use {
+    'rafamadriz/friendly-snippets',
+    event = 'InsertEnter',
+  }
+  use {
+    'L3MON4D3/LuaSnip',
+    config = function()
+      require('settings.luasnip')
+    end
+  }
 
   -- Solidity
   use 'TovarishFin/vim-solidity'
