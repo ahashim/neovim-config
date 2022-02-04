@@ -71,3 +71,7 @@ Commonly used mappings in this config. [View the full list here](https://github.
 | <kbd>Space cm</kbd>       | Normal                | Telescope view git commits                                                  |
 | <kbd>Space gt</kbd>       | Normal                | Telescope view git status                                                   |
 | <kbd>Space hb</kbd>       | Normal                | Git blame current line                                                      |
+
+## Roadmap
+- Add auto-formatter [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim).
+- Improve diagnostic loclist with [trouble](https://github.com/folke/trouble.nvim).
