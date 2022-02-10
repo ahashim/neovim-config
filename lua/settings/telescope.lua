@@ -1,4 +1,5 @@
 local telescope = require('telescope')
+local actions = require('telescope.actions')
 
 telescope.setup {
    defaults = {
@@ -26,7 +27,13 @@ telescope.setup {
          height = 0.80,
          preview_cutoff = 120,
       },
-      path_display = { 'truncate' },
+      mappings = {
+        i = {
+          ['<C-j>'] = actions.move_selection_next,
+          ['<C-k>'] = actions.move_selection_previous,
+        }
+      },
+      path_display = { 'smart' },
       prompt_prefix = '   ',
       qflist_previewer = require('telescope.previewers').vim_buffer_qflist.new,
       selection_caret = '  ',
