@@ -84,8 +84,8 @@ Commonly used mappings in this config. [View the full list here](https://github.
 | <kbd>Space [c</kbd>       | Normal                | Go to next changed hunk                                                     |
 | <kbd>Space ha</kbd>       | Normal                | Stage the current hunk                                                      |
 | <kbd>Space hu</kbd>       | Normal                | Undo staging hunk                                                           |
-| <kbd>Space hd</kbd>       | Normal                | Diff current file                                                           |
 | <kbd>Space hp</kbd>       | Normal                | Preview hunk                                                                |
+| <kbd>Space hd</kbd>       | Normal                | Diff current file                                                           |
 | <kbd>Space tb</kbd>       | Normal                | Toggle current line blame                                                   |
 | <kbd>Space td</kbd>       | Normal                | Toggle deleted                                                              |
 
