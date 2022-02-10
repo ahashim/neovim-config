@@ -127,4 +127,14 @@ return {
     map {'n', '<leader>fw', ':Telescope live_grep <CR>'} -- live grep
     map {'n', '<leader>fo', ':Telescope oldfiles <CR>'} -- old files
   end,
+
+  -- Telescope
+  trouble = function()
+    map {'n', '<leader>xx', ':Trouble <CR>', silent = true}
+    map {'n', '<leader>xw', ':Trouble workspace_diagnostics <CR>', silent = true}
+    map {'n', '<leader>xd', ':Trouble document_diagnostics <CR>', silent = true}
+    map {'n', '<leader>xl', ':Trouble loclist <CR>', silent = true}
+    map {'n', '<leader>xq', ':Trouble quickfix <CR>', silent = true}
+    map {'n', 'gR', ':Trouble lsp_references <CR>', silent = true}
+  end,
 }

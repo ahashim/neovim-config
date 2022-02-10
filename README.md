@@ -65,7 +65,11 @@ Commonly used mappings in this config. [View the full list here](https://github.
 | <kbd>Space v</kbd>        | Normal                | New Vertical Terminal                                                       |
 | <kbd>jk</kbd>             | Terminal              | Exit Terminal Mode                                                          |
 | <kbd>gd</kbd>             | Normal                | Goes to definition of the symbol under the cursor                           |
-| <kbd>Space l</kbd>        | Normal                | View buffer errors/warnings/info location list                              |
+| <kbd>Space xx</kbd>       | Normal                | View Trouble diagnostics                                                    |
+| <kbd>Space xw</kbd>       | Normal                | Trouble workspace diagnostics                                               |
+| <kbd>Space xd</kbd>       | Normal                | Trouble document diagnostics                                                |
+| <kbd>Space xl</kbd>       | Normal                | Trouble loclist                                                             |
+| <kbd>Space xq</kbd>       | Normal                | Trouble quickfix                                                            |
 | <kbd>Space fb</kbd>       | Normal                | Telescope find in all buffers                                               |
 | <kbd>Space fa</kbd>       | Normal                | Telescope find in all files                                                 |
 | <kbd>Space ff</kbd>       | Normal                | Telescope find in all files (exluding hidden files & those in .gitignore)   |
@@ -86,5 +90,4 @@ Commonly used mappings in this config. [View the full list here](https://github.
 
 ## Roadmap
 - Add auto-formatter [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim).
-- Improve diagnostic loclist with [trouble](https://github.com/folke/trouble.nvim).
 - Figure out terminal colors & how to enable `winhighlight`.

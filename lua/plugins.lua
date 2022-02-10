@@ -216,4 +216,15 @@ return packer.startup(function()
     event = 'BufRead',
     run = ':TSUpdate'
   }
+
+  -- Trouble
+  use {
+    "folke/trouble.nvim",
+    config = function()
+      require('settings.trouble')
+    end,
+    setup = function()
+      require('mappings').trouble()
+    end,
+  }
 end)
