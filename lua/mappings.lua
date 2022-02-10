@@ -82,6 +82,14 @@ return {
     map {'n', '<leader>fn', ':DashboardNewFile <CR>'}
   end,
 
+  -- Fugitive
+  fugitive = function ()
+    map {'n', '<leader>cm', ':Git commit <CR>' }
+    map {'n', '<leader>cam', ':Git commit -a <CR>' }
+    map {'n', '<leader>df', ':Git diff <CR>' }
+    map {'n', '<leader>dc', ':Git diff --cached <CR>' }
+  end,
+
   -- Language Server
   lspconfig = function()
     -- See `:help vim.lsp.*` for documentation on any of the below functions
@@ -115,7 +123,7 @@ return {
     map {'n', '<leader>fb', ':Telescope buffers <CR>'} -- buffers
     map {'n', '<leader>ff', ':Telescope find_files <CR>'} -- files
     map {'n', '<leader>fa', ':Telescope find_files no_ignore=true hidden=true <CR>'} -- hidden files
-    map {'n', '<leader>cm', ':Telescope git_commits <CR>'} -- git commits
+    map {'n', '<leader>lg', ':Telescope git_commits <CR>'} -- git commits
     map {'n', '<leader>gt', ':Telescope git_status <CR>'} -- git statuses
     map {'n', '<leader>fh', ':Telescope help_tags <CR>'} -- help tags
     map {'n', '<leader>fw', ':Telescope live_grep <CR>'} -- live grep
