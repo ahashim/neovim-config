@@ -189,16 +189,6 @@ return packer.startup(function()
     end,
   }
 
-  -- Treesitter
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    config = function()
-      require('settings.treesitter')
-    end,
-    event = 'BufRead',
-    run = ':TSUpdate'
-  }
-
   -- Telescope
   use {
     'nvim-telescope/telescope.nvim',
@@ -215,5 +205,15 @@ return packer.startup(function()
     setup = function()
       require('mappings').telescope()
     end,
+  }
+
+  -- Treesitter
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    config = function()
+      require('settings.treesitter')
+    end,
+    event = 'BufRead',
+    run = ':TSUpdate'
   }
 end)
