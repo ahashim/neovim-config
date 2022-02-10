@@ -85,7 +85,6 @@ return {
   -- Fugitive
   fugitive = function ()
     map {'n', '<leader>cm', ':Git commit <CR>' }
-    map {'n', '<leader>cam', ':Git commit -a <CR>' }
     map {'n', '<leader>df', ':Git diff <CR>' }
     map {'n', '<leader>dc', ':Git diff --cached <CR>' }
     map {'n', '<leader>ps', ':Git push origin <CR>' }
