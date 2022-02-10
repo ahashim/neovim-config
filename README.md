@@ -62,9 +62,9 @@ Commonly used mappings in this config. [View the full list here](https://github.
 | <kbd>Ctrl + a</kbd>       | Normal                | Copy entire file content                                                    |
 | <kbd>Esc</kbd>            | Normal                | Clear search highlight                                                      |
 | <kbd>Space /</kbd>        | Normal                | Toggle comment                                                              |
-| <kbd>Space h</kbd>        | Normal                | New Horizontal Terminal                                                     |
-| <kbd>Space v</kbd>        | Normal                | New Vertical Terminal                                                       |
-| <kbd>jk</kbd>             | Terminal              | Exit Terminal Mode                                                          |
+| <kbd>Space h</kbd>        | Normal                | New horizontal terminal                                                     |
+| <kbd>Space v</kbd>        | Normal                | New vertical terminal                                                       |
+| <kbd>jk</kbd>             | Terminal              | Exit terminal mode                                                          |
 | <kbd>gd</kbd>             | Normal                | Goes to definition of the symbol under the cursor                           |
 | <kbd>Space xx</kbd>       | Normal                | View Trouble diagnostics                                                    |
 | <kbd>Space xw</kbd>       | Normal                | Trouble workspace diagnostics                                               |
