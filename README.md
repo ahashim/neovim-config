@@ -27,6 +27,7 @@ nvim
         ├── comment.lua
         ├── dashboard.lua
         ├── devicons.lua
+        ├── fugitive.lua
         ├── gitsigns.lua
         ├── indent-blankline.lua
         ├── lspconfig.lua
