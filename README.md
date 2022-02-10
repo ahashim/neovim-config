@@ -39,7 +39,8 @@ nvim
         ├── onedark.lua
         ├── statusline.lua
         ├── telescope.lua
-        └── treesitter.lua
+        ├── treesitter.lua
+        └── trouble.lua
 ```
 
 ## Mappings
