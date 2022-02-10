@@ -46,10 +46,10 @@ map {'', '<Up>', 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"',  expr = true }
 
 
 -- Terminal
-map {'t', 'jk', '<C-\\><C-n>'} -- get out of terminal mode
-map {'n', '<leader>T', ':Telescope terms <CR>'} -- pick a hidden term
-map {'n', '<leader>h', ":execute 15 .. 'new +terminal' | let b:term_type = 'hori' | startinsert <CR>"} -- new horizontal terminal
-map {'n', '<leader>v', ":execute 'vnew +terminal' | let b:term_type = 'vert' | startinsert <CR>"} -- new vertical terminal
+-- map {'t', 'jk', '<C-\\><C-n>'} -- get out of terminal mode
+-- map {'n', '<leader>T', ':Telescope terms <CR>'} -- pick a hidden term
+-- map {'n', '<leader>h', ":execute 15 .. 'new +terminal' | let b:term_type = 'hori' | startinsert <CR>"} -- new horizontal terminal
+-- map {'n', '<leader>v', ":execute 'vnew +terminal' | let b:term_type = 'vert' | startinsert <CR>"} -- new vertical terminal
 
 
 
