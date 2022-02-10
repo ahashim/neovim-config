@@ -88,6 +88,7 @@ return {
     map {'n', '<leader>cam', ':Git commit -a <CR>' }
     map {'n', '<leader>df', ':Git diff <CR>' }
     map {'n', '<leader>dc', ':Git diff --cached <CR>' }
+    map {'n', '<leader>ps', ':Git push origin <CR>' }
   end,
 
   -- Language Server
