@@ -30,6 +30,7 @@ map {'n', '<Esc>', ':noh <CR>'} -- clear search highlight
 map {'n', '<leader>w', ':write <CR>'} -- quick save
 map {'n', '<leader>q', ':quit! <CR>'} -- quick close
 map {'n', '<leader>x', ':exit <CR>'} -- quick save & close
+map {'v', "'", ":s/\"/'/g <CR>"} -- convert double quotes to single
 
 
 -- Buffers/Tabs
