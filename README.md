@@ -88,7 +88,7 @@ Commonly used mappings in this config. [View the full list here](https://github.
 | <kbd>Space hd</kbd>       | Normal                | Diff current file                                                           |
 | <kbd>Space tb</kbd>       | Normal                | Toggle current line blame                                                   |
 | <kbd>Space td</kbd>       | Normal                | Toggle deleted                                                              |
-| <kbd>'</kbd>              | Visual                | Convert double-quotes to single quotes within selection                     |
+| <kbd>'</kbd>              | Visual                | Convert double quotes to single within selection                            |
 
 ## Roadmap
 - Add auto-formatter [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim).
