@@ -179,7 +179,10 @@ return packer.startup(function()
   }
 
   -- Solidity
-  use 'TovarishFin/vim-solidity'
+  use {
+    'TovarishFin/vim-solidity',
+    ft = {'solidity'},
+  }
 
   -- Statusline
   use {
