@@ -131,7 +131,10 @@ return packer.startup(function()
   }
 
   -- Markdown
-  use 'iamcco/markdown-preview.nvim'
+  use {
+    'iamcco/markdown-preview.nvim',
+    ft = {'markdown'},
+  }
 
   -- NvimTree
   use {
