@@ -203,12 +203,6 @@ return packer.startup(function()
         'nvim-telescope/telescope-fzf-native.nvim',
         run = 'make',
       },
-      {
-        'nvim-telescope/telescope-media-files.nvim',
-        setup = function()
-          media_files = '<leader>fp'
-        end,
-      },
     },
     setup = function()
       require('mappings').telescope()
