@@ -27,9 +27,9 @@ end
 -- General
 map {'n', '<C-a>', ':%y+ <CR>'} -- copy entire file content
 map {'n', '<Esc>', ':noh <CR>'} -- clear search highlight
-map {'n', '<Leader>w', ':write <CR>'} -- quick save
-map {'n', '<Leader>q', ':quit! <CR>'} -- quick close
-map {'n', '<Leader>x', ':exit <CR>'} -- quick save & close
+map {'n', '<leader>w', ':write <CR>'} -- quick save
+map {'n', '<leader>q', ':quit! <CR>'} -- quick close
+map {'n', '<leader>x', ':exit <CR>'} -- quick save & close
 
 
 -- Buffers/Tabs
