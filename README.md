@@ -87,4 +87,4 @@ Commonly used mappings in this config. [View the full list here](https://github.
 ## Roadmap
 - Add auto-formatter [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim).
 - Improve diagnostic loclist with [trouble](https://github.com/folke/trouble.nvim).
-- Use a smarter terminal plugin like [toggleterm](https://github.com/akinsho/toggleterm.nvim)
+- Figure out terminal colors & how to enable `winhighlight`.
