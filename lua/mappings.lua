@@ -26,11 +26,11 @@ end
 
 -- General
 map {'n', '<C-a>', ':%y+ <CR>'} -- copy entire file content
-map {'n', '<Esc>', ':noh <CR>'} -- clear search highlight
-map {'n', '<leader>w', ':write <CR>'} -- quick save
-map {'n', '<leader>q', ':quit! <CR>'} -- quick close
-map {'n', '<leader>x', ':exit <CR>'} -- quick save & close
-map {'v', "'", ":s/\"/'/g <CR>"} -- convert double quotes to single
+map {'n', '<Esc>', ':noh <CR>', silent = true} -- clear search highlight
+map {'n', '<leader>w', ':write <CR>', silent = true} -- quick save
+map {'n', '<leader>q', ':quit! <CR>', silent = true} -- quick close
+map {'n', '<leader>x', ':exit <CR>', silent = true} -- quick save & close
+map {'v', "'", ":s/\"/'/g <CR>", silent = true} -- convert double quotes to single
 
 
 -- Buffers/Tabs
