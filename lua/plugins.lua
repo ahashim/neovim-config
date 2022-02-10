@@ -93,7 +93,12 @@ return packer.startup(function()
   }
 
   -- Fugitive
-  use 'tpope/vim-fugitive'
+  use {
+    'tpope/vim-fugitive',
+    setup = function()
+      require('mappings').fugitive()
+    end,
+  }
 
   -- Gitsigns
   use {
