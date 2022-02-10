@@ -13,14 +13,14 @@ A modern config for [neovim](https://neovim.io/) focused on developer experience
 
 ```
 nvim
-├── init.lua                  # initialization
-└── lua/                      # neovim config files
+├── init.lua                    # initialization
+└── lua/                        # neovim config files
     ├── autocommands.lua
     ├── core.lua
     ├── mappings.lua
     ├── plugins.lua
     ├── theme.lua
-    └── settings/             # plugin settings
+    └── settings/               # plugin settings
         ├── bufdelete.lua
         ├── bufferline.lua
         ├── colorizer.lua
