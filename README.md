@@ -69,9 +69,20 @@ Commonly used mappings in this config. [View the full list here](https://github.
 | <kbd>Space fb</kbd>       | Normal                | Telescope find in all buffers                                               |
 | <kbd>Space fa</kbd>       | Normal                | Telescope find in all files                                                 |
 | <kbd>Space ff</kbd>       | Normal                | Telescope find in all files (exluding hidden files & those in .gitignore)   |
-| <kbd>Space cm</kbd>       | Normal                | Telescope view git commits                                                  |
+| <kbd>Space lg</kbd>       | Normal                | Telescope view git commits                                                  |
 | <kbd>Space gt</kbd>       | Normal                | Telescope view git status                                                   |
+| <kbd>Space [c</kbd>       | Normal                | Go to next changed hunk                                                     |
+| <kbd>Space ha</kbd>       | Normal                | Stage the current hunk                                                      |
+| <kbd>Space hu</kbd>       | Normal                | Undo staging hunk                                                           |
+| <kbd>Space hd</kbd>       | Normal                | Diff current file                                                           |
+| <kbd>Space hp</kbd>       | Normal                | Preview hunk                                                                |
+| <kbd>Space tb</kbd>       | Normal                | Toggle current line blame                                                   |
+| <kbd>Space td</kbd>       | Normal                | Toggle deleted                                                              |
 | <kbd>Space hb</kbd>       | Normal                | Git blame current line                                                      |
+| <kbd>Space df</kbd>       | Normal                | Git diff                                                                    |
+| <kbd>Space dc</kbd>       | Normal                | Git diff --cached                                                           |
+| <kbd>Space cm</kbd>       | Normal                | Git commit                                                                  |
+| <kbd>Space ps</kbd>       | Normal                | Git push origin                                                             |
 
 ## Roadmap
 - Add auto-formatter [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim).
