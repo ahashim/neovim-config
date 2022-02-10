@@ -7,7 +7,7 @@ A modern config for [neovim](https://neovim.io/) focused on developer experience
 ## Requirements
 
 - [neovim](https://neovim.io/) version 0.6.0 or above.
-- `:checkhealth` returns all green.
+- `:checkhealth` returns all `OK` status in green.
 
 ## File Structure
 
