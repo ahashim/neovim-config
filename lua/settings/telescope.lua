@@ -33,7 +33,7 @@ telescope.setup({
 				["<C-k>"] = actions.move_selection_previous,
 			},
 		},
-		path_display = { "smart" },
+		path_display = { "truncate" },
 		prompt_prefix = "   ",
 		qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
 		selection_caret = "  ",
