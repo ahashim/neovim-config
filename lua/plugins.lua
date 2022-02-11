@@ -152,6 +152,14 @@ return packer.startup(function()
     end,
   }
 
+  -- Null-ls
+  use {
+    'jose-elias-alvarez/null-ls.nvim',
+    config = function()
+      require('settings.null-ls');
+    end,
+  }
+
   -- OneDark
   use {
     'navarasu/onedark.nvim',

@@ -91,5 +91,4 @@ Commonly used mappings in this config. [View the full list here](https://github.
 | <kbd>'</kbd>              | Visual                | Convert double quotes to single within selection                            |
 
 ## Roadmap
-- Add auto-formatter [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim).
-- Figure out terminal colors & how to enable `winhighlight`.
+*   Figure out terminal autocomplete colors & how to darken the buffer with `winhighlight`.
