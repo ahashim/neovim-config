@@ -64,7 +64,7 @@ return {
 
 	-- BufDelete
 	bufdelete = function()
-		map({ "n", "<S-x>", ":BufDel <CR>" })
+		map({ "n", "<S-x>", ":BufDel <CR>", silent = true })
 	end,
 
 	-- Comment
