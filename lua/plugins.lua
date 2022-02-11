@@ -123,6 +123,15 @@ return packer.startup(function()
 	-- Language Server
 	use("neovim/nvim-lspconfig")
 	use({
+		"tami5/lspsaga.nvim",
+		config = function()
+			require("settings.lspsaga")
+		end,
+		setup = function()
+			require("mappings").lspsaga()
+		end,
+	})
+	use({
 		"williamboman/nvim-lsp-installer",
 		config = function()
 			require("settings.lspconfig")

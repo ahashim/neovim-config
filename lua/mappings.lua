@@ -93,6 +93,22 @@ return {
 		map({ "n", "<leader>ps", ":Git push origin <CR>", silent = true })
 	end,
 
+	-- LSP Saga
+	lspsaga = function()
+		map({ "n", "gh", ":Lspsaga lsp_finder <CR>", silent = true })
+		map({ "n", "gd", ":Lspsaga preview_definition <CR>", silent = true })
+		map({ "n", "gr", ":Lspsaga rename <CR>", silent = true })
+		map({ "n", "gs", ":Lspsaga signature_help <CR>", silent = true })
+		map({ "n", "gx", ":Lspsaga code_action <CR>", silent = true })
+		map({ "x", "gx", ":<c-u>Lspsaga range_code_action <CR>", silent = true })
+		map({ "n", "K", ":Lspsaga hover_doc <CR>", silent = true })
+		map({ "n", "go", ":Lspsaga show_line_diagnostics <CR>", silent = true })
+		map({ "n", "gj", ":Lspsaga diagnostic_jump_next <CR>", silent = true })
+		map({ "n", "gk", ":Lspsaga diagnostic_jump_prev <CR>", silent = true })
+		map({ "n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1) <CR>", silent = true })
+		map({ "n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1) <CR>", silent = true })
+	end,
+
 	-- NvimTree
 	nvimtree = function()
 		map({ "n", "<C-n>", ":NvimTreeToggle <CR>" })
