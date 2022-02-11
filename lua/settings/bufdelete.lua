@@ -1,4 +1,4 @@
-require("bufdel").setup({
-	next = "cycle",
-	quit = true,
+require('bufdel').setup({
+  next = 'cycle',
+  quit = true,
 })

@@ -7,24 +7,24 @@ local global = vim.g
 local set = vim.opt
 
 ----- GLOBALS -----
-global.mapleader = " "
+global.mapleader = ' '
 
 ----- GENERAL -----
-set.clipboard = "unnamedplus"
+set.clipboard = 'unnamedplus'
 set.cmdheight = 1
 set.cursorline = true
 set.hidden = true
-set.fillchars = { eob = " " }
-set.mouse = "a"
-set.shortmess:append("sI")
+set.fillchars = { eob = ' ' }
+set.mouse = 'a'
+set.shortmess:append('sI')
 set.undofile = true
-set.whichwrap:append("<>[]hl")
+set.whichwrap:append('<>[]hl')
 
 ----- COLORS -----
 set.termguicolors = true
 
 ----- LAYOUT -----
-set.signcolumn = "yes"
+set.signcolumn = 'yes'
 set.splitbelow = true
 set.splitright = true
 set.title = true
