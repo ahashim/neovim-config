@@ -1,8 +1,8 @@
-require('trouble').setup{
-  signs = {
-    error = '',
-    hint = '',
-    information = '',
-    warning = '',
-  }
-}
+require("trouble").setup({
+	signs = {
+		error = "",
+		hint = "",
+		information = "",
+		warning = "",
+	},
+})
