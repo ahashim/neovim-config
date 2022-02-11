@@ -6,7 +6,7 @@ require("lspsaga").setup({
 	server_filetype_map = {},
 
 	-- code actions
-	code_action_icon = " ",
+	code_action_icon = "🗲 ",
 	code_action_keys = {
 		quit = "q",
 		exec = "<CR>",
