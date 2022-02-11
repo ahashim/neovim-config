@@ -184,9 +184,6 @@ return packer.startup(function()
 		config = function()
 			require("settings.luasnip")
 		end,
-		setup = function()
-			require("mappings").luasnip()
-		end,
 	})
 
 	-- Solidity
