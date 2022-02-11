@@ -61,6 +61,9 @@ lspSymbol("Hint", "")
 lspSymbol("Info", "")
 lspSymbol("Warn", "")
 
+local function on_attach()
+	-- Set up buffer-local keymaps (vim.api.nvim_buf_set_keymap()), etc.
+end
 -- Initialize Servers
 require("nvim-lsp-installer").on_server_ready(function(server)
 	-- This setup() function is exactly the same as lspconfig's setup function.
@@ -72,33 +75,51 @@ require("nvim-lsp-installer").on_server_ready(function(server)
 		flags = {
 			lspdebounce_text_changes = 150,
 		},
+		on_attach = on_attach,
 		root_dir = vim.loop.cwd,
 	}
 
-	-- Lua
-	if server.name == "sumneko_lua" then
-		opts.settings = {
-			Lua = {
-				runtime = {
-					-- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-					version = "LuaJIT",
-					-- Setup your lua path
-					path = vim.split(package.path, ";"),
+	local enhanced_server_opts = {
+		["sumneko_lua"] = function(options)
+			options.settings = {
+				Lua = {
+					runtime = {
+						-- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+						version = "LuaJIT",
+						-- Setup your lua path
+						path = vim.split(package.path, ";"),
+					},
+					diagnostics = {
+						-- Get the language server to recognize the `vim` global
+						globals = { "vim" },
+					},
+					workspace = {
+						-- Make the server aware of Neovim runtime files
+						library = vim.api.nvim_get_runtime_file("", true),
+					},
+					-- Do not send telemetry data containing a randomized but unique identifier
+					telemetry = {
+						enable = false,
+					},
 				},
-				diagnostics = {
-					-- Get the language server to recognize the `vim` global
-					globals = { "vim" },
-				},
-				workspace = {
-					-- Make the server aware of Neovim runtime files
-					library = vim.api.nvim_get_runtime_file("", true),
-				},
-				-- Do not send telemetry data containing a randomized but unique identifier
-				telemetry = {
-					enable = false,
-				},
-			},
-		}
+			}
+		end,
+		["stylelint_lsp"] = function(options)
+			options.on_attach = function(client)
+				client.resolved_capabilities.document_formatting = false
+				client.resolved_capabilities.document_range_formatting = false
+			end
+		end,
+		["tsserver"] = function(options)
+			options.on_attach = function(client)
+				client.resolved_capabilities.document_formatting = false
+				client.resolved_capabilities.document_range_formatting = false
+			end
+		end,
+	}
+
+	if enhanced_server_opts[server.name] then
+		enhanced_server_opts[server.name](opts)
 	end
 
 	server:setup(opts)
