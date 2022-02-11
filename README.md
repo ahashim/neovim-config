@@ -39,7 +39,7 @@ A modern config for [neovim](https://neovim.io) focused on developer experience.
             ├── indent-blankline.lua
             ├── lspconfig.lua
             ├── lspkind_icons.lua
-            ├── lspsignature.lua
+            ├── lspkind_saga.lua
             ├── luasnip.lua
             ├── null-ls.lua
             ├── nvim-cmp.lua
@@ -72,17 +72,7 @@ Commonly used mappings in this config. [View the full list here](https://github.
 | <kbd>Space h</kbd>     | Normal   | New horizontal terminal                                                   |
 | <kbd>Space v</kbd>     | Normal   | New vertical terminal                                                     |
 | <kbd>jk</kbd>          | Terminal | Exit terminal mode                                                        |
-| <kbd>gd</kbd>          | Normal   | Goes to definition of the symbol under the cursor                         |
-| <kbd>Space xx</kbd>    | Normal   | Toggle Trouble diagnostics                                                |
-| <kbd>Space xw</kbd>    | Normal   | Trouble workspace diagnostics                                             |
-| <kbd>Space xd</kbd>    | Normal   | Trouble document diagnostics                                              |
-| <kbd>Space xl</kbd>    | Normal   | Trouble loclist                                                           |
-| <kbd>Space xq</kbd>    | Normal   | Trouble quickfix                                                          |
-| <kbd>Space fb</kbd>    | Normal   | Telescope find in all buffers                                             |
-| <kbd>Space fa</kbd>    | Normal   | Telescope find in all files                                               |
-| <kbd>Space ff</kbd>    | Normal   | Telescope find in all files (exluding hidden files & those in .gitignore) |
-| <kbd>Space lg</kbd>    | Normal   | Telescope view git commits                                                |
-| <kbd>Space gt</kbd>    | Normal   | Telescope view git status                                                 |
+| <kbd>'</kbd>           | Visual   | Convert double-quotes to single quotes within range                       |
 | <kbd>Space hb</kbd>    | Normal   | Git blame current line                                                    |
 | <kbd>Space df</kbd>    | Normal   | Git diff                                                                  |
 | <kbd>Space dc</kbd>    | Normal   | Git diff --cached                                                         |
@@ -95,7 +85,25 @@ Commonly used mappings in this config. [View the full list here](https://github.
 | <kbd>Space hd</kbd>    | Normal   | Diff current file                                                         |
 | <kbd>Space tb</kbd>    | Normal   | Toggle current line blame                                                 |
 | <kbd>Space td</kbd>    | Normal   | Toggle deleted                                                            |
-| <kbd>'</kbd>           | Visual   | Convert double-quotes to single quotes within selection                   |
+| <kbd>gh</kbd>          | Normal   | Find all instances of the symbol under the cursor                         |
+| <kbd>gd</kbd>          | Normal   | Preview symbol definition                                                 |
+| <kbd>gr</kbd>          | Normal   | Rename all instances of the symbol                                        |
+| <kbd>gs</kbd>          | Normal   | Signature help                                                            |
+| <kbd>gx</kbd>          | Normal   | Code actions                                                              |
+| <kbd>K</kbd>           | Normal   | Hover documentation                                                       |
+| <kbd>go</kbd>          | X        | Show line diagnostics                                                     |
+| <kbd>gj</kbd>          | Normal   | Diagnostics jump next                                                     |
+| <kbd>gk</kbd>          | Normal   | Diagnostics jump previous                                                 |
+| <kbd>Space xx</kbd>    | Normal   | Toggle Trouble diagnostics                                                |
+| <kbd>Space xw</kbd>    | Normal   | Trouble workspace diagnostics                                             |
+| <kbd>Space xd</kbd>    | Normal   | Trouble document diagnostics                                              |
+| <kbd>Space xl</kbd>    | Normal   | Trouble loclist                                                           |
+| <kbd>Space xq</kbd>    | Normal   | Trouble quickfix                                                          |
+| <kbd>Space fb</kbd>    | Normal   | Telescope find in all buffers                                             |
+| <kbd>Space fa</kbd>    | Normal   | Telescope find in all files                                               |
+| <kbd>Space ff</kbd>    | Normal   | Telescope find in all files (exluding hidden files & those in .gitignore) |
+| <kbd>Space lg</kbd>    | Normal   | Telescope view git commits                                                |
+| <kbd>Space gt</kbd>    | Normal   | Telescope view git status                                                 |
 
 ## Roadmap
 
