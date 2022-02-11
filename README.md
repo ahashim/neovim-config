@@ -2,46 +2,53 @@
 
 [![neovim preview](https://gateway.pinata.cloud/ipfs/QmamHwPGgpDQGRwvR7SVZXmScBxUv43nd6N4QjtUNPgwLK?preview=1 "neovim preview")](https://gateway.pinata.cloud/ipfs/QmamHwPGgpDQGRwvR7SVZXmScBxUv43nd6N4QjtUNPgwLK?preview=1)
 
-A modern config for [neovim](https://neovim.io/) focused on developer experience. Featuring language server support, syntax highlighting, terminal windows, git integration, and [a few other things.](https://github.com/ahashim/neovim-config/blob/main/lua/plugins.lua)
+A modern config for [neovim](https://neovim.io) focused on developer experience. Featuring:
+
+* language server support
+* syntax highlighting
+* code actions
+* terminal support
+* full git integration
+
+...and [a few other things.](https://github.com/ahashim/neovim-config/blob/main/lua/plugins.lua)
 
 ## Requirements
 
-- [neovim](https://neovim.io/) version 0.6.0 or above.
-- `:checkhealth` returns all `OK` status in green.
+* [neovim](https://neovim.io) version 0.6.0 or above.
+* `:checkhealth` returns all `OK` status in green.
 
 ## File Structure
 
-```
-nvim
-├── init.lua                    # initialization
-└── lua/                        # neovim config files
-    ├── autocommands.lua
-    ├── core.lua
-    ├── mappings.lua
-    ├── plugins.lua
-    ├── theme.lua
-    └── settings/               # plugin settings
-        ├── bufdelete.lua
-        ├── bufferline.lua
-        ├── colorizer.lua
-        ├── comment.lua
-        ├── dashboard.lua
-        ├── devicons.lua
-        ├── fugitive.lua
-        ├── gitsigns.lua
-        ├── indent-blankline.lua
-        ├── lspconfig.lua
-        ├── lspkind_icons.lua
-        ├── lspsignature.lua
-        ├── luasnip.lua
-        ├── nvim-cmp.lua
-        ├── nvimtree.lua
-        ├── onedark.lua
-        ├── statusline.lua
-        ├── telescope.lua
-        ├── treesitter.lua
-        └── trouble.lua
-```
+    nvim
+    ├── init.lua                    # initialization
+    └── lua/                        # neovim config files
+        ├── autocommands.lua
+        ├── core.lua
+        ├── mappings.lua
+        ├── plugins.lua
+        ├── theme.lua
+        └── settings/               # plugin settings
+            ├── bufdelete.lua
+            ├── bufferline.lua
+            ├── colorizer.lua
+            ├── comment.lua
+            ├── dashboard.lua
+            ├── devicons.lua
+            ├── fugitive.lua
+            ├── gitsigns.lua
+            ├── indent-blankline.lua
+            ├── lspconfig.lua
+            ├── lspkind_icons.lua
+            ├── lspsignature.lua
+            ├── luasnip.lua
+            ├── null-ls.lua
+            ├── nvim-cmp.lua
+            ├── nvimtree.lua
+            ├── onedark.lua
+            ├── statusline.lua
+            ├── telescope.lua
+            ├── treesitter.lua
+            └── trouble.lua
 
 ## Mappings
 
@@ -66,7 +73,7 @@ Commonly used mappings in this config. [View the full list here](https://github.
 | <kbd>Space v</kbd>        | Normal                | New vertical terminal                                                       |
 | <kbd>jk</kbd>             | Terminal              | Exit terminal mode                                                          |
 | <kbd>gd</kbd>             | Normal                | Goes to definition of the symbol under the cursor                           |
-| <kbd>Space xx</kbd>       | Normal                | View Trouble diagnostics                                                    |
+| <kbd>Space xx</kbd>       | Normal                | Toggle Trouble diagnostics                                                  |
 | <kbd>Space xw</kbd>       | Normal                | Trouble workspace diagnostics                                               |
 | <kbd>Space xd</kbd>       | Normal                | Trouble document diagnostics                                                |
 | <kbd>Space xl</kbd>       | Normal                | Trouble loclist                                                             |
@@ -81,14 +88,14 @@ Commonly used mappings in this config. [View the full list here](https://github.
 | <kbd>Space dc</kbd>       | Normal                | Git diff --cached                                                           |
 | <kbd>Space cm</kbd>       | Normal                | Git commit                                                                  |
 | <kbd>Space ps</kbd>       | Normal                | Git push origin                                                             |
-| <kbd>Space [c</kbd>       | Normal                | Go to next changed hunk                                                     |
+| <kbd>Space \[c</kbd>      | Normal                | Go to next changed hunk                                                     |
 | <kbd>Space ha</kbd>       | Normal                | Stage the current hunk                                                      |
 | <kbd>Space hu</kbd>       | Normal                | Undo staging hunk                                                           |
 | <kbd>Space hp</kbd>       | Normal                | Preview hunk                                                                |
 | <kbd>Space hd</kbd>       | Normal                | Diff current file                                                           |
 | <kbd>Space tb</kbd>       | Normal                | Toggle current line blame                                                   |
 | <kbd>Space td</kbd>       | Normal                | Toggle deleted                                                              |
-| <kbd>'</kbd>              | Visual                | Convert double quotes to single within selection                            |
+| <kbd>'</kbd>              | Visual                | Convert double-quotes to single quotes within selection                     |
 
 ## Roadmap
-*   Figure out terminal autocomplete colors & how to darken the buffer with `winhighlight`.
+* Figure out terminal autocomplete colors & how to darken the buffer with `winhighlight`.
