@@ -13,8 +13,8 @@ require('lspsaga').setup({
   },
   code_action_prompt = {
     enable = true,
-    sign = true,
-    sign_priority = 1,
+    sign = false,
+    sign_priority = 0,
     virtual_text = true,
   },
 
