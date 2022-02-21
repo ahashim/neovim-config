@@ -1,7 +1,5 @@
 # neovim-config
 
-[![neovim preview](https://gateway.pinata.cloud/ipfs/QmamHwPGgpDQGRwvR7SVZXmScBxUv43nd6N4QjtUNPgwLK?preview=1 "neovim preview")](https://gateway.pinata.cloud/ipfs/QmamHwPGgpDQGRwvR7SVZXmScBxUv43nd6N4QjtUNPgwLK?preview=1)
-
 A modern config for [neovim](https://neovim.io) focused on developer experience. Featuring:
 
 - language server support
@@ -108,3 +106,4 @@ Commonly used mappings in this config. [View the full list here](https://github.
 ## Roadmap
 
 - Figure out terminal autocomplete colors & how to darken the buffer with `winhighlight`.
+- Add better screenshots.
