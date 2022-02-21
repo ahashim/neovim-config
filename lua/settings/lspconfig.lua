@@ -79,6 +79,12 @@ require('nvim-lsp-installer').on_server_ready(function(server)
     root_dir = vim.loop.cwd,
   }
 
+  -- Don't auto format when clashing LSP's with null-ls
+  local no_auto_format = function(client)
+    client.resolved_capabilities.document_formatting = false
+    client.resolved_capabilities.document_range_formatting = false
+  end
+
   local enhanced_server_opts = {
     ['sumneko_lua'] = function(options)
       options.settings = {
@@ -105,16 +111,10 @@ require('nvim-lsp-installer').on_server_ready(function(server)
       }
     end,
     ['stylelint_lsp'] = function(options)
-      options.on_attach = function(client)
-        client.resolved_capabilities.document_formatting = false
-        client.resolved_capabilities.document_range_formatting = false
-      end
+      options.on_attach = no_auto_format
     end,
     ['tsserver'] = function(options)
-      options.on_attach = function(client)
-        client.resolved_capabilities.document_formatting = false
-        client.resolved_capabilities.document_range_formatting = false
-      end
+      options.on_attach = no_auto_format
     end,
   }
 
