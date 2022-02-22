@@ -14,7 +14,7 @@ local custom = {
         },
         command = 'solhint',
         format = 'line',
-        multiple_files = true,
+        from_stderr = false,
         on_output = helpers.diagnostics.from_pattern('([^:]+):([%d]+):([%d]+): (.*) %[([%a]+)/([^]]+)%]', {
           'filename',
           'row',
@@ -22,10 +22,15 @@ local custom = {
           'message',
           'severity',
           'code',
+        }, {
+          severities = {
+            ['Warning'] = helpers.diagnostics.severities.warning,
+          },
         }),
       }),
       method = null_ls.methods.DIAGNOSTICS,
       name = 'solhint',
+      to_stdin = true,
     },
   },
 }
