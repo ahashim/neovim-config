@@ -17,7 +17,7 @@ cmd(
 )
 
 -- File extension specific tabbing
-cmd([[ autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 ]])
+cmd([[ autocmd Filetype python,solidity setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 ]])
 
 -- Packer
 cmd([[
