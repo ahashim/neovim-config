@@ -39,13 +39,19 @@ global.nvim_tree_show_icons = {
   files = 1,
   git = 0,
 }
-global.nvim_tree_quit_on_open = 0
-global.nvim_tree_window_picker_exclude = {
-  filetype = { 'notify', 'packer', 'qf' },
-  buftype = { 'terminal' },
-}
 
 nvimtree.setup({
+  actions = {
+    open_file = {
+      quit_on_open = 0,
+      window_picker = {
+        exclude = {
+          filetype = { 'notify', 'packer', 'qf' },
+          buftype = { 'terminal' },
+        },
+      },
+    },
+  },
   auto_close = false,
   disable_netrw = true,
   filters = {
