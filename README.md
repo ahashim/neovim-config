@@ -1,18 +1,23 @@
-# neovim-config
+<div style="text-align: center;">
+  <h1>neovim-config</h1>
 
-A modern config for [neovim](https://neovim.io) focused on developer experience. Featuring:
-
-- language server support
-- syntax highlighting
-- code actions
-- terminal support
-- full git integration
-
-...and [a few other things.](https://github.com/ahashim/neovim-config/blob/main/lua/plugins.lua)
+  <h6>A modern config for <a href="https://neovim.io">neovim</a> focused on developer experience.</h6>
+</div>
 
 ![dashboard](https://cloudflare-ipfs.com/ipfs/QmbB2DBVSyRpEfpWVDmatTdcXupsXrCkRmBBdsXeEhY8Ld/dashboard.png "dashboard")
 ![git-blame](https://cloudflare-ipfs.com/ipfs/QmbB2DBVSyRpEfpWVDmatTdcXupsXrCkRmBBdsXeEhY8Ld/git-blame.png "git-blame")
 ![telescope](https://cloudflare-ipfs.com/ipfs/QmbB2DBVSyRpEfpWVDmatTdcXupsXrCkRmBBdsXeEhY8Ld/telescope.png "telescope")
+
+Including:
+
+- Language server support
+- Syntax highlighting
+- Code actions
+- Terminal support
+- Full Git integration
+- Fuzzy finder
+
+...and [a few other things.](https://github.com/ahashim/neovim-config/blob/main/lua/plugins.lua)
 
 ## Requirements
 
