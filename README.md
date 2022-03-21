@@ -1,4 +1,4 @@
-<div style="text-align: center;">
+<div align="center">
   <h1>neovim-config</h1>
 
   <h6>A modern config for <a href="https://neovim.io">neovim</a> focused on developer experience.</h6>
