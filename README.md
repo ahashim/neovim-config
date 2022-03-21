@@ -10,6 +10,10 @@ A modern config for [neovim](https://neovim.io) focused on developer experience.
 
 ...and [a few other things.](https://github.com/ahashim/neovim-config/blob/main/lua/plugins.lua)
 
+![dashboard](https://cloudflare-ipfs.com/ipfs/QmbB2DBVSyRpEfpWVDmatTdcXupsXrCkRmBBdsXeEhY8Ld/dashboard.png "dashboard")
+![git-blame](https://cloudflare-ipfs.com/ipfs/QmbB2DBVSyRpEfpWVDmatTdcXupsXrCkRmBBdsXeEhY8Ld/git-blame.png "git-blame")
+![telescope](https://cloudflare-ipfs.com/ipfs/QmbB2DBVSyRpEfpWVDmatTdcXupsXrCkRmBBdsXeEhY8Ld/telescope.png "telescope")
+
 ## Requirements
 
 - [neovim](https://neovim.io) version 0.6.0 or above.
@@ -106,4 +110,3 @@ Commonly used mappings in this config. [View the full list here](https://github.
 ## Roadmap
 
 - Figure out terminal autocomplete colors & how to darken the buffer with `winhighlight`.
-- Add better screenshots.
