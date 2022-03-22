@@ -1,42 +1,7 @@
 local null_ls = require('null-ls')
-local helpers = require('null-ls.helpers')
-
--- custom sources
-local custom = {
-  diagnostics = {
-    solhint = { -- https://protofire.github.io/solhint
-      filetypes = { 'solidity' },
-      generator = helpers.generator_factory({
-        args = {
-          '$FILENAME',
-          '--formatter',
-          'unix',
-        },
-        command = 'solhint',
-        format = 'line',
-        from_stderr = false,
-        on_output = helpers.diagnostics.from_pattern('([^:]+):([%d]+):([%d]+): (.*) %[([%a]+)/([^]]+)%]', {
-          'filename',
-          'row',
-          'col',
-          'message',
-          'severity',
-          'code',
-        }, {
-          severities = {
-            ['Warning'] = helpers.diagnostics.severities.warning,
-          },
-        }),
-      }),
-      method = null_ls.methods.DIAGNOSTICS,
-      name = 'solhint',
-      to_stdin = true,
-    },
-  },
-}
 
 -- full source list
-local sources = {
+local my_sources = {
   -- code actions
   null_ls.builtins.code_actions.gitsigns,
 
@@ -48,8 +13,8 @@ local sources = {
   null_ls.builtins.diagnostics.golangci_lint,
   null_ls.builtins.diagnostics.mypy,
   null_ls.builtins.diagnostics.php,
+  null_ls.builtins.diagnostics.solhint,
   null_ls.builtins.diagnostics.stylelint,
-  custom.diagnostics.solhint,
 
   -- formatting
   null_ls.builtins.formatting.black,
@@ -76,5 +41,5 @@ null_ls.setup({
       ]])
     end
   end,
-  sources = sources,
+  sources = my_sources,
 })
