@@ -98,7 +98,7 @@ Commonly used mappings in this config. [View the full list here](https://github.
 | <kbd>gs</kbd>          | Normal   | Signature help                                                            |
 | <kbd>gx</kbd>          | Normal   | Code actions                                                              |
 | <kbd>K</kbd>           | Normal   | Hover documentation                                                       |
-| <kbd>go</kbd>          | X        | Show line diagnostics                                                     |
+| <kbd>go</kbd>          | Ex       | Show line diagnostics                                                     |
 | <kbd>gj</kbd>          | Normal   | Diagnostics jump next                                                     |
 | <kbd>gk</kbd>          | Normal   | Diagnostics jump previous                                                 |
 | <kbd>Space xx</kbd>    | Normal   | Toggle Trouble diagnostics                                                |
