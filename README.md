@@ -4,9 +4,9 @@
   <h6>A modern config for <a href="https://neovim.io">neovim</a> focused on developer experience.</h6>
 </div>
 
-![dashboard](https://cloudflare-ipfs.com/ipfs/QmbB2DBVSyRpEfpWVDmatTdcXupsXrCkRmBBdsXeEhY8Ld/dashboard.png "dashboard")
-![git-blame](https://cloudflare-ipfs.com/ipfs/QmbB2DBVSyRpEfpWVDmatTdcXupsXrCkRmBBdsXeEhY8Ld/git-blame.png "git-blame")
-![telescope](https://cloudflare-ipfs.com/ipfs/QmbB2DBVSyRpEfpWVDmatTdcXupsXrCkRmBBdsXeEhY8Ld/telescope.png "telescope")
+![dashboard](./images/dashboard.png "dashboard")
+![git-blame](./images/git-blame.png "git-blame")
+![telescope](./images/telescope.png "telescope")
 
 Including:
 
