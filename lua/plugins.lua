@@ -20,6 +20,7 @@ return packer.startup(function()
   -- Bufferline
   use({
     'akinsho/bufferline.nvim',
+    branch = 'main',
     after = 'nvim-web-devicons',
     config = function()
       require('settings.bufferline')
