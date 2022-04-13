@@ -109,6 +109,7 @@ require('nvim-lsp-installer').on_server_ready(function(server)
           },
         },
       }
+      options.on_attach = no_auto_format
     end,
     ['stylelint_lsp'] = function(options)
       options.on_attach = no_auto_format
