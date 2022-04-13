@@ -28,7 +28,6 @@ global.nvim_tree_icons = {
   },
   symlink = '',
 }
-global.nvim_tree_indent_markers = 1
 global.nvim_tree_root_folder_modifier = table.concat({
   ':t:gs?$?/..',
   string.rep(' ', 1000),
@@ -64,6 +63,11 @@ nvimtree.setup({
   hijack_netrw = true,
   ignore_ft_on_setup = { 'dashboard' },
   open_on_tab = false,
+  renderer = {
+    indent_markers = {
+      enable = false,
+    },
+  },
   update_cwd = true,
   update_focused_file = {
     enable = true,
