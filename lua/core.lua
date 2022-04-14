@@ -11,6 +11,7 @@ global.mapleader = ' '
 
 ----- GENERAL -----
 set.clipboard = 'unnamedplus'
+set.colorcolumn = '80'
 set.cmdheight = 1
 set.cursorline = true
 set.hidden = true
