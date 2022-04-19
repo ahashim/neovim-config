@@ -39,7 +39,7 @@ cmd([[
 return {
   hide_statusline = function()
     local api = vim.api
-    local buftype = api.nvim_buf_get_option('%', 'ft')
+    local buftype = api.nvim_buf_get_option(0, 'ft')
     local hidden = {
       'help',
       'dashboard',
