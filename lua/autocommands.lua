@@ -8,6 +8,9 @@ cmd([[ autocmd BufWritePre * :%s/\s\+$//e ]])
 -- Hide status line on certain windows
 cmd([[ autocmd BufEnter,BufRead,BufWinEnter,FileType,WinEnter * lua require('autocommands').hide_statusline() ]])
 
+-- Auto hide nvim-tree
+cmd([[ autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif ]])
+
 -- Hide line numbers in terminal windows
 cmd([[ au TermOpen term://* setlocal nonumber norelativenumber | setfiletype terminal ]])
 

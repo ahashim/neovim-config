@@ -42,7 +42,7 @@ global.nvim_tree_show_icons = {
 nvimtree.setup({
   actions = {
     open_file = {
-      quit_on_open = 0,
+      quit_on_open = false,
       window_picker = {
         exclude = {
           filetype = { 'notify', 'packer', 'qf' },
@@ -51,10 +51,9 @@ nvimtree.setup({
       },
     },
   },
-  auto_close = false,
   disable_netrw = true,
   filters = {
-    dotfiles = false,
+    dotfiles = true,
   },
   git = {
     ignore = false,
@@ -74,7 +73,6 @@ nvimtree.setup({
     update_cwd = false,
   },
   view = {
-    allow_resize = true,
     side = 'left',
     width = 25,
     hide_root_folder = true,
