@@ -142,7 +142,12 @@ return packer.startup(function()
   -- Markdown
   use({
     'iamcco/markdown-preview.nvim',
-    ft = { 'markdown' },
+    config = function()
+      require('settings.markdown-preview')
+    end,
+    run = function()
+      vim.fn['mkdp#util#install']()
+    end,
   })
 
   -- NvimTree

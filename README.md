@@ -48,6 +48,7 @@ Including:
             ├── lspkind_icons.lua
             ├── lspkind_saga.lua
             ├── luasnip.lua
+            ├── markdown-prview.lua
             ├── null-ls.lua
             ├── nvim-cmp.lua
             ├── nvimtree.lua
