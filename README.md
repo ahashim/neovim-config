@@ -60,7 +60,7 @@ Including:
 
 ## Mappings
 
-Commonly used mappings in this config. [View the full list here](https://github.com/ahashim/neovim-config/blob/main/lua/mappings.lua#L27).
+Commonly used mappings in this config. [View the full list here](https://github.com/ahashim/neovim-config/blob/main/lua/mappings.lua#L1).
 
 | Shortcut               | Mode     | Description                                                               |
 | ---------------------- | -------- | ------------------------------------------------------------------------- |
