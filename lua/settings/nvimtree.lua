@@ -1,43 +1,4 @@
 local nvimtree = require('nvim-tree')
-local global = vim.g
-
--- nvimtree options need to be applied in global scope before initialization
-global.nvim_tree_add_trailing = 0
-global.nvim_tree_git_hl = 0
-global.nvim_tree_highlight_opened_files = 0
-global.nvim_tree_icons = {
-  default = '',
-  folder = {
-    arrow_open = '',
-    arrow_closed = '',
-    default = '',
-    empty = '',
-    empty_open = '',
-    open = '',
-    symlink = '',
-    symlink_open = '',
-  },
-  git = {
-    deleted = '',
-    ignored = '◌',
-    renamed = '➜',
-    staged = '✓',
-    unmerged = '',
-    unstaged = '✗',
-    untracked = '★',
-  },
-  symlink = '',
-}
-global.nvim_tree_root_folder_modifier = table.concat({
-  ':t:gs?$?/..',
-  string.rep(' ', 1000),
-  '?:gs?^??',
-})
-global.nvim_tree_show_icons = {
-  folders = 1,
-  files = 1,
-  git = 0,
-}
 
 nvimtree.setup({
   actions = {
@@ -63,9 +24,46 @@ nvimtree.setup({
   ignore_ft_on_setup = { 'dashboard' },
   open_on_tab = false,
   renderer = {
+    add_trailing = false,
+    highlight_git = false,
+    highlight_opened_files = 'none',
+    icons = {
+      glyphs = {
+        default = '',
+        folder = {
+          arrow_open = '',
+          arrow_closed = '',
+          default = '',
+          empty = '',
+          empty_open = '',
+          open = '',
+          symlink = '',
+          symlink_open = '',
+        },
+        git = {
+          deleted = '',
+          ignored = '◌',
+          renamed = '➜',
+          staged = '✓',
+          unmerged = '',
+          unstaged = '✗',
+          untracked = '★',
+        },
+        symlink = '',
+      },
+      show = {
+        file = true,
+        folder = true,
+      },
+    },
     indent_markers = {
       enable = false,
     },
+    root_folder_modifier = table.concat({
+      ':t:gs?$?/..',
+      string.rep(' ', 1000),
+      '?:gs?^??',
+    }),
   },
   update_cwd = true,
   update_focused_file = {
