@@ -1,11 +1,11 @@
-local global = vim.g
+local db = require('dashboard')
 local version = vim.version()
 local title = string.format('nvim v%s.%s.%s', version['major'], version['minor'], version['patch'])
 
-global.dashboard_disable_at_vimenter = 0
-global.dashboard_disable_statusline = 1
-global.dashboard_default_executive = 'telescope'
-global.dashboard_custom_header = {
+db.custom_header = {
+  '',
+  '',
+  '',
   'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
   '88888888888888888888888888888888888888888888888888888',
   '8888"""""""""""""""8888888888888888888888888888888888',
@@ -33,14 +33,39 @@ global.dashboard_custom_header = {
   '8888888888888888888888888:::8888888888888888888888888',
   '88888888888888888888888888a88888888888888888888888888',
   '"""""""""""""""""""\' `"""""""""\' `"""""""""""""""""""',
+  '',
+  '',
+  '',
 }
-global.dashboard_custom_section = {
-  a = { description = { '洛 New File                  SPC f n' }, command = 'DashboardNewFile' },
-  b = { description = { '  Recents                   SPC f o' }, command = 'Telescope oldfiles' },
-  c = { description = { '  Find File                 SPC f f' }, command = 'Telescope find_files' },
-  d = { description = { '  Find Word                 SPC f w' }, command = 'Telescope live_grep' },
+db.custom_center = {
+  {
+    action = 'DashboardNewFile',
+    desc = 'New File                  ',
+    icon = '洛',
+    shortcut = 'SPC f n',
+  },
+  {
+    action = 'Telescope oldfiles',
+    desc = 'Recents                   ',
+    icon = ' ',
+    shortcut = 'SPC f o',
+  },
+  {
+    action = 'Telescope find_files',
+    desc = 'File File                 ',
+    icon = ' ',
+    shortcut = 'SPC f f',
+  },
+  {
+    action = 'Telescope live_grep',
+    desc = 'Find Word                 ',
+    icon = ' ',
+    shortcut = 'SPC f w',
+  },
 }
-global.dashboard_custom_footer = {
+db.custom_footer = {
+  '',
+  '',
   '"Talk is cheap. Show me the code."',
   '          Linus Torvalds          ',
 }
