@@ -86,6 +86,9 @@ require('nvim-lsp-installer').on_server_ready(function(server)
   end
 
   local enhanced_server_opts = {
+    ['gopls'] = function(options)
+      options.on_attach = no_auto_format
+    end,
     ['sumneko_lua'] = function(options)
       options.settings = {
         Lua = {
